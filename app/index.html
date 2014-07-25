@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PocketStableClient</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/pocket-stable-client.css">
+  </head>
+  <body>
+    <script>
+      window.PocketStableClientENV = {{ENV}};
+      window.EmberENV = window.PocketStableClientENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/pocket-stable-client.js"></script>
+    <script>
+      window.PocketStableClient = require('pocket-stable-client/app')['default'].create(PocketStableClientENV.APP);
+    </script>
+  </body>
+</html>
