@@ -1,0 +1,591 @@
+/* FONTS */
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url('fonts/proximanova-bold-webfont.eot');
+  src: url('fonts/proximanova-bold-webfont.eot?#iefix') format("embedded-opentype"), url('fonts/proximanova-bold-webfont.woff') format("woff"), url('fonts/proximanova-bold-webfont.ttf') format("truetype"), url('fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url('fonts/proximanova-semibold-webfont.eot');
+  src: url('fonts/proximanova-semibold-webfont.eot?#iefix') format("embedded-opentype"), url('fonts/proximanova-semibold-webfont.woff') format("woff"), url('fonts/proximanova-semibold-webfont.ttf') format("truetype"), url('fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url('fonts/proximanova-regular-webfont.eot');
+  src: url('fonts/proximanova-regular-webfont.eot?#iefix') format("embedded-opentype"), url('fonts/proximanova-regular-webfont.woff') format("woff"), url('fonts/proximanova-regular-webfont.ttf') format("truetype"), url('fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  background: #ECECED;
+  font-family: "proxima_nova_rgregular", sans-serif;
+}
+
+.fullwhite {
+  background: #fff;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.navigation_bar {
+  width: 100%;
+  height: 73px;
+  background: #fff;
+  position: relative;
+}
+
+.navleft {
+  float: left;
+  width: 20%;
+  padding: 16px 0 0 5%;
+  z-index: 10;
+  position: relative;
+}
+
+.navright {
+  float: right;
+  width: 20%;
+  padding: 16px 5% 0 0;
+  text-align: right;
+  z-index: 10;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.section_title {
+  float: left;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  height: 50px;
+  padding: 28px 0 0 0;
+  position: absolute;
+  font-family: "proxima_nova_rgbold", sans-serif;
+  font-size: 18px;
+}
+
+.page_title {
+  width: 100%;
+  text-align: center;
+  padding: 1em 0 0;
+  font-size: 16px;
+}
+
+.horse_profilephoto {
+  width: 100%;
+  height: 400px;
+  background-image: url('images/profilepic.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.standard_list_left {
+  float: left;
+  width: 45%;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.standard_list_right {
+  float: left;
+  width: 55%;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.standard_list_left li {
+  padding: 20px;
+  margin: 10px 0 10px 10%;
+  background: #fff;
+  color: #980921;
+  height: 20px;
+}
+
+.standard_list_right li {
+  text-align: right;
+  padding: 20px 16px 0 0;
+  margin: 10px 10% 10px 0;
+  background: #fff;
+  height: 40px;
+}
+
+.standard_list_left_full {
+  float: left;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  li {
+    padding: 16px;
+    margin: 10px 5% 10px;
+    background: #fff;
+  }
+}
+
+.list_buttons {
+  float: left;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  color: #666666;
+  li {
+    padding: 16px;
+    margin: 10px 5% 10px;
+    background: url('images/arrow_right.png') right 12px top 12px no-repeat white;
+  }
+  a {
+    text-decoration: none;
+    color: #888888;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+/* Alert */
+
+.alert {
+  max-width: 280px;
+  margin: 20% auto;
+  text-align: center;
+  color: #666666;
+  p {
+    max-width: 220px;
+    margin: auto;
+    padding: 8% 0 4%;
+  }
+}
+
+.alert_horsename, .alert_notetitle, .alert_doctitle {
+  height: 100px;
+  text-align: center;
+  font-size: 28px;
+  font-family: "proxima_nova_rgbold", sans-serif;
+  font-size: 32px;
+}
+
+/* Buttons - Red(solid button) and Outline(outlined button) */
+
+.red {
+  width: 220px;
+  padding: 10px 0;
+  background: #960D24;
+  border: 0;
+  color: #fff;
+  font-family: "proxima_nova_rgregular", sans-serif;
+  margin: 2% auto;
+  text-align: center;
+}
+
+.outline {
+  width: 220px;
+  padding: 10px 0;
+  background: #ebecec;
+  border: 1px solid #960D24;
+  color: #960D24;
+  font-family: "proxima_nova_rgregular", sans-serif;
+  margin: 2% auto;
+  text-align: center;
+  clear: both;
+}
+
+button {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  &:hover {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.shrink {
+  &:focus, &:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+/* Login Stuff */
+
+.login_form {
+  input, textarea, select {
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.login_hdr {
+  width: 100%;
+  margin: auto;
+  padding-top: 4%;
+  text-align: center;
+  background: #fff;
+}
+
+.login_form {
+  background: #fff;
+  text-align: center;
+  padding: 8% 0 4%;
+}
+
+.login_field {
+  margin: 2% 0;
+  color: #333;
+  background: #F0F0EF;
+  padding: 10px;
+  width: 260px;
+  border: 1px solid #E1E1DD;
+}
+
+.login_ftr {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: url('images/redhourse_footer.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  min-height: 240px;
+  p {
+    padding: 8% 0 2%;
+    margin: 0;
+  }
+}
+
+.check {
+  max-width: 280px;
+  margin: 2% auto;
+  text-align: center;
+  color: #666666;
+  p {
+    max-width: 220px;
+    margin: auto;
+    padding: 8% 0 4%;
+  }
+}
+
+.check_title {
+  font-size: 18px;
+  padding: 0;
+  font-family: "proxima_novasemibold", sans-serif;
+}
+
+.card_fields {
+  width: 280px;
+  min-height: 110px;
+  margin: auto;
+}
+
+.expdate {
+  font-size: 12px;
+  color: #333;
+  text-align: left;
+  width: 90px;
+  margin: 12px auto 0;
+  float: left;
+}
+
+.cc_cv {
+  font-size: 12px;
+  color: #333;
+  text-align: right;
+  width: 80px;
+  margin: 12px auto 0;
+  float: right;
+}
+
+.mm_field {
+  clear: both;
+  margin: 2% 0;
+  color: #333;
+  background: #F0F0EF;
+  padding: 10px;
+  width: 30px;
+  border: 1px solid #E1E1DD;
+  float: left;
+}
+
+.yyyy_field {
+  margin: 2% 0 0 8px;
+  color: #333;
+  background: #F0F0EF;
+  padding: 10px;
+  width: 40px;
+  border: 1px solid #E1E1DD;
+  float: left;
+}
+
+.cv_field {
+  margin: 2% 0;
+  color: #333;
+  background: #F0F0EF;
+  padding: 10px;
+  width: 40px;
+  border: 1px solid #E1E1DD;
+  float: right;
+}
+
+/* Upgrade Stuff */
+
+.upgrade {
+  max-width: 280px;
+  margin: 2% auto;
+  text-align: center;
+  color: #666666;
+  p {
+    max-width: 280px;
+    margin: auto;
+    padding: 4% 0 4%;
+  }
+}
+
+.upgrade_title {
+  font-size: 16px;
+  padding: 0;
+  font-family: "proxima_novasemibold", sans-serif;
+  color: #941127;
+}
+
+input[type=radio].css-checkbox {
+  display: none;
+  + label.css-label {
+    padding-left: 35px;
+    height: 30px;
+    margin-bottom: 8px;
+    margin-left: 4px;
+    display: inline-block;
+    line-height: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  &:checked + label.css-label {
+    background-position: 0 -30px;
+  }
+}
+
+label.css-label {
+  background-image: url('images/csscheckbox_img.png');
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.large_number {
+  font-size: 72px;
+  color: #941127;
+}
+
+.mid_number {
+  font-size: 22px;
+  color: #941127;
+  font-family: "proxima_novasemibold", sans-serif;
+}
+
+.bigmid_number {
+  font-size: 32px;
+  color: #941127;
+  font-family: "proxima_novasemibold", sans-serif;
+}
+
+.xsmall {
+  font-size: 12px;
+}
+
+.addhorses {
+  width: 100%;
+  background: #ECECED;
+  text-align: center;
+  p {
+    padding: 22px 0 0;
+    color: #666666;
+  }
+}
+
+.addbuttons {
+  width: 200px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.addfive {
+  border: 0.8em solid #941127;
+  background: #941127;
+  border-radius: 100%;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  float: left;
+  margin: 0 20px;
+  p {
+    margin-top: -18px;
+    font-size: 1.5em;
+    color: #fff;
+  }
+}
+
+.minusfive {
+  p {
+    margin-top: -18px;
+    font-size: 1.5em;
+    color: #fff;
+  }
+  border: 0.8em solid #BEBDBE;
+  background: #BEBDBE;
+  border-radius: 100%;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  color: #fff;
+  float: left;
+  margin: 0 20px;
+}
+
+.totalpayment {
+  width: 100%;
+  background: #ECECED;
+  text-align: center;
+  p {
+    padding: 44px;
+  }
+}
+
+/* Cards */
+
+.card {
+  background: #fff;
+  padding: 2%;
+  list-style: none;
+  margin: 4%;
+  img {
+    float: left;
+    padding-right: 4%;
+  }
+  li a {
+    text-decoration: none;
+    color: #333;
+  }
+  h3 {
+    font-size: 16px;
+    font-family: "proxima_nova_rgbold", sans-serif;
+    margin: 0;
+    line-height: 14px;
+    color: #000;
+  }
+  p {
+    font-size: 14px;
+    line-height: 12px;
+    margin: 9px 0 0 0;
+    padding: 0;
+    &.card_breed {
+      padding-top: 14px;
+      font-family: "proxima_nova_rgbold", sans-serif;
+      font-size: 12px;
+      line-height: 6px;
+      color: #666;
+    }
+  }
+}
+
+#horse_info input, input[type="date"], #feeding_records input, #stable_info input {
+  text-align: right;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  margin: 2%;
+  width: 80%;
+  color: #333;
+  background: #F0F0EF;
+  padding: 10px;
+  border: 1px solid #E1E1DD;
+}
+
+form#account_settings input, .state {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  width: 94%;
+  color: #333;
+  background: #F0F0EF;
+  padding: 10px;
+  border: 1px solid #E1E1DD;
+}
+
+.city, .state, .zip {
+  float: left;
+  margin-top: 10px;
+}
+
+.city, .zip {
+  width: 32%!important;
+}
+
+.state {
+  width: 18%!important;
+  margin: 10px 2% 0 2%;
+}
+
+.clear {
+  clear: both;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .horse_profilephoto {
+    width: 768px;
+    height: 400px;
+    margin: auto;
+  }
+  .standard_list_left_full li, .standard_list_left li, .standard_list_right li, .list_buttons li {
+    margin: 10px 0 10px 0%;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .horse_profilephoto {
+    height: 300px;
+  }
+}

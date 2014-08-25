@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="login_hdr"><img src="assets/images/login_splash.jpg" alt="Pocket Stable" /></div>
+  <div class="login_form">
+    <form {{action 'createUser' on='submit'}}>
+      {{input id='name' placeholder='Name' value=name class="login_field"}}
+      {{input id='email' placeholder='Email' value=email class="login_field"}}
+      {{input id='password' placeholder='Password' value=password class="login_field"}}
+      <input class="red" type="submit" value="Sign Up">
+    </form>
+  </div>
+</div>

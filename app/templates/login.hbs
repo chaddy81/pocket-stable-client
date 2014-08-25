@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="login_hdr">
+    <img src="assets/images/login_splash.jpg" alt="Pocket Stable" />
+  </div>
+
+  <div class="login_form">
+    <form {{action 'authenticate' on='submit'}}>
+      {{input id='identification' placeholder='Email' value=identification class="login_field"}}
+      {{input id='password' placeholder='Password' type='password' value=password class="login_field"}}
+      <input class="red" type="submit" value="Login">
+    </form>
+  </div>
+
+  <div class="login_ftr">
+    <p>Need an account?</p>
+    {{#link-to 'signup'}}<button class="outline">Sign Up Free!</button>{{/link-to}}
+  </div>
+</div>
