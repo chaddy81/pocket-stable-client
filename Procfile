@@ -1,1 +1,1 @@
-web: ember serve --environment production --port $PORT
+web: ./node_modules/ember-cli/bin/ember serve --environment production --port $PORT
