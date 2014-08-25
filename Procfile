@@ -1,1 +1,1 @@
-web: ./node_modules/ember-cli/bin/ember serve
+web: ember serve
