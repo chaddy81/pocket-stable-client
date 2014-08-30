@@ -8,8 +8,16 @@ var Router = Ember.Router.extend(ApplicationRouteMixin, {
 
 Router.map(function() {
   this.route('login');
+  this.route('logout');
   this.resource('horses');
-  this.resource('horse', { path: '/horses/:horse_id' });
+  this.resource('horse', { path: '/horses/:horse_id' }, function() {
+    this.route('edit');
+    this.route('weight-calculator');
+    this.route('links');
+    this.route('notes');
+    this.route('documents');
+    this.route('veterinarians');
+  });
   this.route('signup');
   this.route('check-email');
   this.route('change-password');
@@ -20,6 +28,8 @@ Router.map(function() {
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
+  this.route('horseEdit');
+  this.route('horse/edit');
 });
 
 export default Router;

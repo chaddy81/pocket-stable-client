@@ -24,14 +24,22 @@ module.exports = function(environment) {
     ENV.APP.LOG_TRANSITIONS = true;
     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.authorizer = 'simple-auth-authorizer:devise';
+    ENV.APP.serverTokenEndpoint = 'http://0.0.0.0:3000/users/sign_in';
+    ENV.APP.crossOriginWhitelist = ['http://0.0.0.0:3000', 'http://0.0.0.0:3000/api/users'];
+    ENV.APP.host = 'http://0.0.0.0:3000';
   }
 
   if (environment === 'test') {
-
+    ENV.APP.authorizer = 'simple-auth-authorizer:devise';
+    ENV.APP.serverTokenEndpoint = '0.0.0.0:3000/users/signin';
+    ENV.APP.host = 'http://pocket-stable-api.herokuapp.com';
   }
 
   if (environment === 'production') {
-
+    ENV.APP.authorizer = 'simple-auth-authorizer:devise';
+    ENV.APP.serverTokenEndpoint = '0.0.0.0:3000/users/signin';
+    ENV.APP.host = 'http://pocket-stable-api.herokuapp.com';
   }
 
   return ENV;

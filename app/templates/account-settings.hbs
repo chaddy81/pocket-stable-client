@@ -2,21 +2,21 @@
 <div class="page_title"></div>
 
 <ul class="list_buttons">
-  <a href="upgradeaccount.html"><li>Upgrade Account</li></a>
+  {{#link-to 'upgrade-account'}}<li>Upgrade Account</li>{{/link-to}}
 </ul>
 
 <ul class="standard_list_left_full">
-  <li>John Chapman</li>
-  <li>jchapman@gmail.com</li>
-  <li>Double Z Ranch<br />
+  <li>{{session.user_name}}</li>
+  <li>{{session.user_email}}</li>
+  {{!-- <li>Double Z Ranch<br />
   1234 Ranch Drive<br />
   Austin, Texas 12345</li>
-  <li>123 123-1234</li>
+  <li>123 123-1234</li> --}}
 </ul>
 
 <ul class="list_buttons">
-  <a href="changepassword.html"><li>Change Password</li></a>
-  <a href="cancelaccount.html"><li>Cancel Account</li></a>
+  {{#link-to 'change-password'}}<li>Change Password</li>{{/link-to}}
+  {{#link-to 'cancel-account'}}<li>Cancel Account</li>{{/link-to}}
   <a href="mailto:support@pocketstable.com"><li>Support</li></a>
 </ul>
 </div>

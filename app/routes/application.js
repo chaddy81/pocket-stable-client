@@ -10,8 +10,11 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     },
 
     sessionInvalidationSucceeded: function() {
-      console.log('logged out');
       this.transitionTo('login');
+    },
+
+    weightCalculator: function() {
+      console.log(this.get('session.horse'));
     }
   }
 });

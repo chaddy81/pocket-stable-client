@@ -10,9 +10,10 @@ export default Ember.Controller.extend({
     var self = this;
 
     user.save().then(function(data) {
+      console.log("Successful data: " + data);
       self.transitionToRoute('login');
     }, function(data) {
       console.log(data);
-    });
+    }.bind(this));
   }
 });

@@ -9,11 +9,15 @@
 
     <ul>
         <li>{{#link-to 'horses'}}My Horses{{/link-to}}</li>
-        <li><a href="#">Veterinarians</a></li>
-        <li><a href="#">Documents</a></li>
-        <li><a href="#">Notes</a></li>
-        <li><a href="#">Weight Calculator</a></li>
-        <li><a href="#">Links</a></li>
+        <li>{{#link-to 'horse.veterinarians' session.horse}}Veterinarians{{/link-to}}</li>
+        <li>{{#link-to 'horse.documents' session.horse}}Documents{{/link-to}}</li>
+        <li>{{#link-to 'horse.notes' session.horse}}Notes{{/link-to}}</li>
+        <li>{{#link-to "horse.weight-calculator" session.horse}}Weight Calculator{{/link-to}}</li>
+        <li>{{#link-to "horse.links" session.horse}}Links{{/link-to}}</li>
+    </ul>
+
+    <ul>
+      <li><a {{action 'invalidateSession'}}>Logout</a></li>
     </ul>
   </nav>
 
@@ -21,13 +25,10 @@
   <div class="site-overlay"></div>
 
   <div id="push_wrap">
-    <div class="navigation_bar">
-      <div class="menu-btn">&#9776;</div>
-      <div class="section_title"></div>
-      <div class="navright"><img src="assets/images/edit_button.png" /></div>
-    </div>
+    {{outlet header}}
 {{/if}}
 {{outlet}}
+{{view.currentPath}}
 {{#if session.isAuthenticateded }}
   </div>
 {{/if}}

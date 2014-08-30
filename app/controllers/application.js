@@ -8,4 +8,5 @@ export default Ember.Controller.extend({
   title: function() {
     return this.get('title');
   }
+
 });
