@@ -17,7 +17,9 @@ Router.map(function() {
     this.route('notes');
     this.route('documents');
     this.route('veterinarians');
+    this.route('photos');
   });
+  this.resource('photo', { path: '/horses/:horse_id/photos/:photo_id' });
   this.route('signup');
   this.route('check-email');
   this.route('change-password');
@@ -28,8 +30,6 @@ Router.map(function() {
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
-  this.route('horseEdit');
-  this.route('horse/edit');
 });
 
 export default Router;
