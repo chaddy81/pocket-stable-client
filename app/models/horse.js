@@ -8,5 +8,6 @@ export default DS.Model.extend({
   foaling_date: DS.attr(),
   color: DS.attr(),
   date_of_birth: DS.attr(),
-  markings: DS.attr()
+  markings: DS.attr(),
+  breed: DS.attr()
 });

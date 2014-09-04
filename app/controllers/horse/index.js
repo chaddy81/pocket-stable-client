@@ -1,12 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  actions: {
-    edit: function() {
-      this.transitionTo('horse.edit');
-    }
-  },
-  title: 'Account Settings',
+
   foalingDate: function() {
     var foaling = this.get('model.foaling_date');
 
@@ -17,6 +12,5 @@ export default Ember.Controller.extend({
     var birth = this.get('model.date_of_birth');
 
     return moment(birth).format("MM/DD/YYYY");
-  }.property('model.date_of_birth'),
-
+  }.property('model.date_of_birth')
 });

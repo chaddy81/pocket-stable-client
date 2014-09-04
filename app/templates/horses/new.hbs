@@ -1,0 +1,36 @@
+<div class="container">
+<ul class="standard_list_left">
+  <li>Name</li>
+  <li>Breed</li>
+  <li>Reg. Number</li>
+  <li>Sex</li>
+  <li>Fertility</li>
+  <li>Foaling Date</li>
+  <li>Color</li>
+  <li>Date of Birth</li>
+  <li>Markings</li>
+  <li>Org Numbers</li>
+  <li>Emergencies</li>
+  <li>Comments</li>
+{{!--   <li>Share Links</li>
+ --}}</ul>
+
+<form {{action 'createHorse' on='submit'}}>
+  <ul class="standard_list_right">
+    <li>{{input id='name' placeholder='Name' class="login_field"}}</li>
+    <li>{{input id='breed' placeholder='Breed' class="login_field"}}</li>
+    <li>{{input id='registration_number' placeholder='Registration Number' class="login_field"}}</li>
+    <li>{{input id='sex' placeholder='Sex' class="login_field"}}</li>
+    <li>{{input id='fertility' placeholder='Fertility' class="login_field"}}</li>
+    <li>{{input id='foalingDate' placeholder='Foaling Date' class="login_field"}}</li>
+    <li>{{input id='color' placeholder='Color' class="login_field"}}</li>
+    <li>{{input id='birthDate' placeholder='Birth Date' class="login_field"}}</li>
+    <li>{{input id='markings' placeholder='Markings' class="login_field"}}</li>
+    <li>{{input id='org_number' placeholder='Org Number' class="login_field"}}</li>
+    <li>{{input id='emergencies' placeholder='Emergencies' class="login_field"}}</li>
+    <li>{{input id='comments' placeholder='Comments' class="login_field"}}</li>
+  </ul>
+  <input class="red" type="submit" value="Save">
+  <button class="outline" {{action 'cancel'}}>Cancel</button>
+</form>
+</div>

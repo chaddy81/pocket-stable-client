@@ -9,7 +9,10 @@ var Router = Ember.Router.extend(ApplicationRouteMixin, {
 Router.map(function() {
   this.route('login');
   this.route('logout');
-  this.resource('horses');
+  this.resource('horses', function() {
+    this.route('new');
+  });
+
   this.resource('horse', { path: '/horses/:horse_id' }, function() {
     this.route('edit');
     this.route('weight-calculator');
@@ -30,6 +33,7 @@ Router.map(function() {
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
+  this.route('horse/new');
 });
 
 export default Router;
