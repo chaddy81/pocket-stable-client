@@ -5,18 +5,20 @@ export default Ember.Controller.extend({
     createHorse: function() {
       console.log(this.get('name'));
       var name = this.get('name'),
-          nick_name = this.get('model.nick_name'),
-          sex = this.get('model.sex'),
-          fertility = this.get('model.fertility'),
-          foaling_date = this.get('model.foaling_date'),
-          color = this.get('model.color'),
-          date_of_birth = this.get('model.date_of_birth'),
-          markings = this.get('model.markings'),
-          breed = this.get('model.breed'),
-          registration_number = this.get('model.registration_number'),
-          org_number = this.get('model.org_number'),
-          emergencies = this.get('model.emergencies'),
-          comments = this.get('model.comments');
+          nick_name = this.get('nick_name'),
+          sex = this.get('sex'),
+          fertility = this.get('fertility'),
+          foaling_date = this.get('foaling_date'),
+          color = this.get('color'),
+          date_of_birth = this.get('date_of_birth'),
+          markings = this.get('markings'),
+          breed = this.get('breed'),
+          registration_number = this.get('registration_number'),
+          org_number = this.get('org_number'),
+          emergencies = this.get('emergencies'),
+          comments = this.get('comments');
+
+      var self = this;
 
       var horse = this.get('store').createRecord('horse', {
                 name: name,
@@ -34,7 +36,7 @@ export default Ember.Controller.extend({
                 comments: comments });
 
       horse.save().then(function(data) {
-        console.log(data);
+        self.transitionToRoute('horse', horse);
       },function(error) {
         console.log(error.responseText);
       });

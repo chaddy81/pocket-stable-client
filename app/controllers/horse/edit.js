@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
 
   actions: {
     updateHorse: function() {
+      console.log(this.get('model'));
       var name = this.get('model.name'),
           nick_name = this.get('model.nick_name'),
           sex = this.get('model.sex'),
@@ -17,12 +18,11 @@ export default Ember.Controller.extend({
           registration_number = this.get('model.registration_number'),
           org_number = this.get('model.org_number'),
           emergencies = this.get('model.emergencies'),
-          comments = this.get('model.comments'),
-          sessionHorse = this.get('session.horse');
+          comments = this.get('model.comments');
 
       var self = this;
 
-      var horse = this.get('store').find('horse', sessionHorse).then(function(horse, error) {
+      var horse = this.get('store').find('horse', this.get('model.id')).then(function(horse, error) {
         horse.set('name', name);
         horse.set('nick_name', nick_name);
         horse.set('sex', sex);
@@ -32,6 +32,10 @@ export default Ember.Controller.extend({
         horse.set('date_of_birth', date_of_birth);
         horse.set('markings', markings);
         horse.set('breed', breed);
+        horse.set('registration_number', registration_number);
+        horse.set('org_number', org_number);
+        horse.set('emergencies', emergencies);
+        horse.set('comments', comments);
         horse.save().then(function(data) {
           self.transitionToRoute('horse', horse);
         }).catch(function(error) {
