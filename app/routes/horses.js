@@ -9,12 +9,12 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
     return this.store.find('horse');
   },
 
-  renderTemplate: function(controller, model) {
-    this.render('basic-header', {
+  renderTemplate: function() {
+    this.render('basic-header-plus', {
       outlet: 'header'
     });
 
-    this.render('horses');
+    this.render();
   }
 
 });
