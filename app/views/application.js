@@ -7,4 +7,5 @@ export default Ember.View.extend({
     currentPath = currentPath.split('.').join('-');
     return currentPath;
   }).property('controller.currentPath')
+
 });

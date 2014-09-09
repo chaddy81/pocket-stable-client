@@ -35,7 +35,7 @@ export default Ember.Controller.extend({
                 emergencies: emergencies,
                 comments: comments });
 
-      horse.save().then(function(data) {
+      horse.save().then(function() {
         self.transitionToRoute('horse', horse);
       },function(error) {
         console.log(error.responseText);

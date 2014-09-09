@@ -13,7 +13,6 @@
   <li>Org Numbers</li>
   <li>Emergencies</li>
   <li>Comments</li>
-  <li>Share Links</li>
 </ul>
 
 <form {{action 'updateHorse' on='submit'}}>
@@ -31,7 +30,6 @@
     <li>{{input id='org_number' placeholder='Org Number' value=model.org_number class="login_field"}}</li>
     <li>{{input id='emergencies' placeholder='Emergencies' value=model.emergencies class="login_field"}}</li>
     <li>{{input id='comments' placeholder='Comments' value=model.comments class="login_field"}}</li>
-    <li>youtu.be</li>
   </ul>
   <input class="red" type="submit" value="Save">
   <button class="outline" {{action 'cancel'}}>Cancel</button>

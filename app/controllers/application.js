@@ -7,6 +7,22 @@ export default Ember.Controller.extend({
   },
   title: function() {
     return this.get('title');
-  }
+  },
 
+  closeNotification: function() {
+    var notification = this.get('notification');
+    if(notification) {
+      if(notification.persists) {
+        console.log("Notification detected, clearing alert notification after next transition");
+        notification.persists = null;
+      } else {
+        console.log("Notification detected, clearing alert notification now");
+        this.set('notification', null);
+      }
+    }
+  },
+
+  notify: function(options) {
+    this.set('notification', options);
+  }
 });

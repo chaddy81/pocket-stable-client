@@ -1,11 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  needs: ['horse'],
+  needs: ['horse', 'application'],
 
   actions: {
     updateHorse: function() {
-      console.log(this.get('model'));
       var name = this.get('model.name'),
           nick_name = this.get('model.nick_name'),
           sex = this.get('model.sex'),
@@ -36,11 +35,15 @@ export default Ember.Controller.extend({
         horse.set('org_number', org_number);
         horse.set('emergencies', emergencies);
         horse.set('comments', comments);
-        horse.save().then(function(data) {
+        horse.save().then(function() {
+          self.get("controllers.application").notify({
+            title: "Success!",
+            message: "You have successfully updated horse.",
+            type: "alert-success"});
           self.transitionToRoute('horse', horse);
         }).catch(function(error) {
           console.log(error);
-        })
+        });
       });
     },
 

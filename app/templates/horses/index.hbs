@@ -1,32 +1,3 @@
-{{!-- <!-- Pushy Menu -->
-<nav class="pushy pushy-left">
-
-  <div class="nav_user">
-    <p>John Champman</p>
-    <p class="user_account"><a href="accountsettings.html"><img src="assets/images/gear.png" /></a></p>
-  </div>
-
-  <ul>
-    <li><a href="myhorses.html">My Horses</a></li>
-    <li><a href="#">Veterinarians</a></li>
-    <li><a href="#">Documents</a></li>
-    <li><a href="#">Notes</a></li>
-    <li><a href="#">Weight Calculator</a></li>
-    <li><a href="#">Links</a></li>
-  </ul>
-</nav>
-
-<!-- Site Overlay -->
-<div class="site-overlay"></div>
-
-<div id="push_wrap">
-
-<div class="navigation_bar">
-  <div class="menu-btn">&#9776;</div>
-  <div class="section_title">My Horses</div>
-  <div class="navright"><img src="assets/images/edit_button.png" /></div>
-</div> --}}
-
 <div id="container">
   <div class="page_title"></div>
   {{#each}}
@@ -37,12 +8,9 @@
           <h3>{{nick_name}}</h3>
           <p>{{name}}</p>
           <p class="card_breed">Breed</p>
-          <p>Camarillo White</p>
+          <p>{{breed}}</p>
         {{/link-to}}
       </li>
     </ol>
   {{/each}}
 </div>
-</div>
-
-{{session.user_full_name}}

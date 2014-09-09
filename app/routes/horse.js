@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     controller.set('model', model);
   },
 
-  renderTemplate: function(controller, model) {
+  renderTemplate: function() {
     this.render('basic-header', {
       outlet: 'header'
     });

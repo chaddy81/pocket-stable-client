@@ -100,6 +100,26 @@ input {
   background-position: center center;
 }
 
+.alert {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 960px;
+  padding: 15px;
+
+  .close {
+    float: right;
+    font-size: 18px;
+  }
+
+  &.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+  }
+}
+
 .standard_list_left {
   float: left;
   width: 45%;
@@ -168,7 +188,7 @@ input {
 
 /* Alert */
 
-.alert {
+.alert_message {
   max-width: 280px;
   margin: 20% auto;
   text-align: center;

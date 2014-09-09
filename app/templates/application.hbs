@@ -1,5 +1,14 @@
+{{#if notification}}
+  <div {{bindAttr class=":alert :fade :in notification.type"}} id="notification">
+    <span class="close" data-dismiss="alert" {{action "closeNotification"}}>&times;</span>
+    {{#if notification.title}}
+      <strong>{{notification.title}}</strong>
+    {{/if}}
+    {{notification.message}}
+  </div>
+{{/if}}
+
 {{#if session.isAuthenticated }}
-  <!-- Pushy Menu -->
   <nav class="pushy pushy-left">
 
     <div class="nav_user">
@@ -21,14 +30,12 @@
     </ul>
   </nav>
 
-  <!-- Site Overlay -->
   <div class="site-overlay"></div>
 
   <div id="push_wrap">
     {{outlet header}}
 {{/if}}
 {{outlet}}
-{{view.currentPath}}
 {{#if session.isAuthenticateded }}
   </div>
 {{/if}}

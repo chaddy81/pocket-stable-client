@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  renderTemplate: function(controller, model) {
+  renderTemplate: function() {
     this.render('basic-header', {
       outlet: 'header'
     });

@@ -4,6 +4,7 @@
     "window": true,
     "Ember": true,
     "PocketStableClientENV": true,
+    "ENV": true,
     "moment": true
   },
   "browser" : true,
