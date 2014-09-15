@@ -6,7 +6,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   title: "My Horses",
 
   model: function() {
-    return this.store.find('horse');
+    return this.store.findAll('horse');
   },
 
   setupController: function (controller, model) {

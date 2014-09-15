@@ -9,6 +9,15 @@ var Router = Ember.Router.extend(ApplicationRouteMixin, {
 Router.map(function() {
   this.route('login');
   this.route('logout');
+
+  this.resource('notes', function() {
+    this.route('new');
+  });
+
+  this.resource('note', { path: '/notes/:note_id' }, function() {
+    this.route('edit');
+  });
+
   this.resource('horses', function() {
     this.route('new');
   });
@@ -17,10 +26,16 @@ Router.map(function() {
     this.route('edit');
     this.route('weight-calculator');
     this.route('links');
-    this.route('notes');
     this.route('documents');
-    this.route('veterinarians');
     this.route('photos');
+  });
+
+  this.resource('veterinarians', function() {
+    this.route('new');
+  });
+
+  this.resource('veterinarian', { path: 'veterinarians/:vet_id' }, function() {
+    this.route('edit')
   });
   this.resource('photo', { path: '/horses/:horse_id/photos/:photo_id' });
   this.route('signup');
@@ -33,7 +48,6 @@ Router.map(function() {
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
-  this.route('horse/new');
 });
 
 export default Router;

@@ -1,0 +1,22 @@
+<div class="container">
+<ul class="standard_list_left">
+  <li>Title</li>
+  <li>Date</li>
+  <li>Start Time</li>
+  <li>End Time</li>
+  <li>Content</li>
+</ul>
+
+<form {{action 'createNote' on='submit'}}>
+  <ul class="standard_list_right">
+    <li>{{input id='title' placeholder='Title' value=title class="login_field"}}</li>
+    <li>{{input id='date' placeholder='Date' value=date class="login_field"}}</li>
+    <li>{{input id='start-time' placeholder='Start Time' value=start_time class="login_field"}}</li>
+    <li>{{input id='end-time' placeholder='End Time' value=end_time class="login_field"}}</li>
+    <li>{{input id='content' placeholder='Content' value=content class="login_field"}}</li>
+  </ul>
+  <input class="red" type="submit" value="Save">
+  <button class="outline" {{action 'cancel'}}>Cancel</button>
+  <button class="outline">Remove Note</button>
+</form>
+</div>

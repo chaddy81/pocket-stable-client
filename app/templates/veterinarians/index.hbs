@@ -1,0 +1,13 @@
+<div id="container">
+  <div class="page_title"></div>
+  {{#each}}
+    <ol class="card">
+      <li class="card_info">
+        {{#link-to 'veterinarian' this}}
+          <h3>Name: {{name}}</h3>
+          <p>Phone: {{phone}}</p>
+        {{/link-to}}
+      </li>
+    </ol>
+  {{/each}}
+</div>

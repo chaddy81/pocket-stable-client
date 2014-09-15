@@ -4,7 +4,8 @@ export default Ember.Controller.extend({
   actions: {
     createHorse: function() {
       console.log(this.get('name'));
-      var name = this.get('name'),
+      var avatar = this.get('avatar'),
+          name = this.get('name'),
           nick_name = this.get('nick_name'),
           sex = this.get('sex'),
           fertility = this.get('fertility'),
@@ -21,6 +22,7 @@ export default Ember.Controller.extend({
       var self = this;
 
       var horse = this.get('store').createRecord('horse', {
+                avatar: avatar,
                 name: name,
                 nick_name: nick_name,
                 sex: sex,

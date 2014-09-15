@@ -150,6 +150,7 @@ input {
   margin: 10px 10% 10px 0;
   background: #fff;
   height: 40px;
+  position: relative;
 }
 
 .standard_list_left_full {
@@ -273,6 +274,16 @@ button {
   padding-top: 4%;
   text-align: center;
   background: #fff;
+
+  &.note {
+    height: 100%;
+    text-align: left;
+
+    button {
+      display: table;
+      margin: 30% auto 10%;
+    }
+  }
 }
 
 .login_form {
@@ -305,6 +316,10 @@ button {
     padding: 8% 0 2%;
     margin: 0;
   }
+}
+
+.datepicker-input {
+  background: #f0f0f0 !important;
 }
 
 .calculator {

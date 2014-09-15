@@ -1,0 +1,15 @@
+<div class="container">
+  <ul class="standard_list_left">
+    <li>Name</li>
+    <li>Phone</li>
+  </ul>
+
+  <form {{action 'createVet' on='submit'}}>
+    <ul class="standard_list_right">
+      <li>{{input id='name' placeholder='Name' value=name class="login_field"}}</li>
+      <li>{{input id='phone' placeholder='Phone' value=phone class="login_field"}}</li>
+    </ul>
+    <input class="red" type="submit" value="Save" />
+    <button class="outline" {{action 'cancel'}}>Cancel</button>
+  </form>
+</div>

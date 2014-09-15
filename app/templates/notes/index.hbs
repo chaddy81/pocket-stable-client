@@ -1,0 +1,20 @@
+<div id="container">
+  <div class="page_title"></div>
+  {{#each}}
+    <ol class="card">
+      <li class="card_info">
+        {{#link-to 'note' this}}
+          <h3>{{title}}</h3>
+          <p>{{formatted-date date "dddd, MMMM D, YYYY"}}</p>
+          <p>{{formattedTime}}</p>
+          <p>--</p>
+          <p>{{content}}</p>
+        {{/link-to}}
+      </li>
+    </ol>
+  {{!-- {{else}}
+    <div class="container">
+      <p>No Current Notes</p>
+    </div> --}}
+  {{/each}}
+</div>

@@ -21,5 +21,9 @@ var app = new EmberApp({
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 app.import('vendor/moment/moment.js');
+app.import('vendor/ember-date-picker/dist/ember-date-picker.min.js');
+app.import('vendor/ember-date-picker/dist/ember-date-picker.min.css');
+app.import('vendor/ember-spin-box/dist/ember-spin-box.min.js');
+app.import('vendor/ember-spin-box/dist/ember-spin-box.min.css');
 
 module.exports = app.toTree();

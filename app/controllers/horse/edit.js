@@ -9,13 +9,13 @@ export default Ember.Controller.extend({
           nick_name = this.get('model.nick_name'),
           sex = this.get('model.sex'),
           fertility = this.get('model.fertility'),
-          foaling_date = this.get('model.foaling_date'),
+          foaling_date = this.get('foaling_date'),
           color = this.get('model.color'),
-          date_of_birth = this.get('model.date_of_birth'),
+          date_of_birth = this.get('date_of_birth'),
           markings = this.get('model.markings'),
           breed = this.get('model.breed'),
           registration_number = this.get('model.registration_number'),
-          org_number = this.get('model.org_number'),
+          org_numbers = this.get('model.org_numbers'),
           emergencies = this.get('model.emergencies'),
           comments = this.get('model.comments');
 
@@ -32,7 +32,7 @@ export default Ember.Controller.extend({
         horse.set('markings', markings);
         horse.set('breed', breed);
         horse.set('registration_number', registration_number);
-        horse.set('org_number', org_number);
+        horse.set('org_numbers', org_numbers);
         horse.set('emergencies', emergencies);
         horse.set('comments', comments);
         horse.save().then(function() {
