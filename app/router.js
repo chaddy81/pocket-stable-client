@@ -35,7 +35,7 @@ Router.map(function() {
   });
 
   this.resource('veterinarian', { path: 'veterinarians/:vet_id' }, function() {
-    this.route('edit')
+    this.route('edit');
   });
   this.resource('photo', { path: '/horses/:horse_id/photos/:photo_id' });
   this.route('signup');
