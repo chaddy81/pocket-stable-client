@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="login_hdr note">
+    <ol class="card">
+      <li class="card_info">
+        <h3>{{model.name}}</h3>
+        <p>
+          <a {{bind-attr href="model.file.file.url"}} target="_blank">{{model.filename}}</a>
+        </p>
+        <p>----</p>
+        <p>{{model.tags}}</p>
+      </li>
+    </ol>
+    <button {{action removeDocument}} class="red">Remove Document</button>
+  </div>
+</div>

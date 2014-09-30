@@ -9,8 +9,8 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
       this.transitionTo('horses');
     },
 
-    sessionAuthenticationFailed: function(error) {
-      console.log(error);
+    sessionAuthenticationFailed: function() {
+      this.triggerEvent('test');
     },
 
     sessionInvalidationSucceeded: function() {

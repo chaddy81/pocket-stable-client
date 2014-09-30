@@ -4,3 +4,5 @@ export default DS.RESTAdapter.extend({
   namespace: 'api',
   host: ENV.APP.host
 });
+
+// export default DS.FixtureAdapter.extend();

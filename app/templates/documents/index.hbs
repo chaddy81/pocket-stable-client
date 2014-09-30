@@ -1,0 +1,15 @@
+<div id="container">
+  <div class="page_title"></div>
+  {{#each}}
+    <ol class="card">
+      <li class="card_info">
+        {{#link-to 'document' this}}
+          <h3>{{name}}</h3>
+          <p>{{filename}}</p>
+          <br />
+          <p>{{tags}}</p>
+        {{/link-to}}
+      </li>
+    </ol>
+  {{/each}}
+</div>

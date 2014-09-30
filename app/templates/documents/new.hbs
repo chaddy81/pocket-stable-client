@@ -1,0 +1,18 @@
+<div class="container">
+  <ul class="standard_list_left">
+    <li>Document Name</li>
+    <li>File</li>
+    <li>Tags (comma separated)</li>
+  </ul>
+
+  <form enctype="multipart/form-data" {{action 'createDocument' on='submit'}}>
+    <ul class="standard_list_right">
+      <li>{{input id='name' placeholder='Name' value=name class="login_field"}}</li>
+      <li>{{view 'upload-file' name="file" file=file }}</li>
+      <li>{{input id='tags' placeholder='Tags' value=tags class="login_field"}}</li>
+    </ul>
+    {{input type="hidden" value=filename name="filename"}}
+    <input class="red" type="submit" value="Save" />
+    <button class="outline" {{action 'cancel'}}>Cancel</button>
+  </form>
+</div>

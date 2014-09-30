@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     createHorse: function() {
-      console.log(this.get('name'));
       var avatar = this.get('avatar'),
           name = this.get('name'),
           nick_name = this.get('nick_name'),
@@ -15,7 +14,7 @@ export default Ember.Controller.extend({
           markings = this.get('markings'),
           breed = this.get('breed'),
           registration_number = this.get('registration_number'),
-          org_number = this.get('org_number'),
+          org_numbers = this.get('org_numbers'),
           emergencies = this.get('emergencies'),
           comments = this.get('comments');
 
@@ -33,11 +32,12 @@ export default Ember.Controller.extend({
                 markings: markings,
                 breed: breed,
                 registration_number: registration_number,
-                org_number: org_number,
+                org_numbers: org_numbers,
                 emergencies: emergencies,
                 comments: comments });
 
       horse.save().then(function() {
+        // self.set(horse,'');
         self.transitionToRoute('horse', horse);
       },function(error) {
         console.log(error.responseText);

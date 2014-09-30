@@ -1,5 +1,6 @@
 <div class="container">
 <ul class="standard_list_left">
+  <li>Horse Avatar</li>
   <li>Nick Name</li>
   <li>Name</li>
   <li>Breed</li>
@@ -17,6 +18,7 @@
 
 <form {{action 'updateHorse' on='submit'}}>
   <ul class="standard_list_right">
+    <li>{{view 'upload-file' name="avatar" file=avatar }}</li>
     <li>{{input id='nick_name' placeholder='Nick Name' value=model.nick_name class="login_field"}}</li>
     <li>{{input id='name' placeholder='Name' value=model.name class="login_field"}}</li>
     <li>{{input id='breed' placeholder='Breed' value=model.breed class="login_field"}}</li>

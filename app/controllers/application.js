@@ -24,5 +24,11 @@ export default Ember.Controller.extend({
 
   notify: function(options) {
     this.set('notification', options);
+  },
+
+  actions: {
+    test: function() {
+      console.log('test');
+    }
   }
 });

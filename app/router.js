@@ -26,7 +26,6 @@ Router.map(function() {
     this.route('edit');
     this.route('weight-calculator');
     this.route('links');
-    this.route('documents');
     this.route('photos');
   });
 
@@ -38,6 +37,12 @@ Router.map(function() {
     this.route('edit');
   });
   this.resource('photo', { path: '/horses/:horse_id/photos/:photo_id' });
+  this.resource('documents', function() {
+    this.route('new');
+  });
+  this.resource('document', { path: '/documents/:id' }, function() {
+    this.route('edit');
+  });
   this.route('signup');
   this.route('check-email');
   this.route('change-password');
@@ -48,6 +53,7 @@ Router.map(function() {
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
+  this.route('documents/new');
 });
 
 export default Router;
