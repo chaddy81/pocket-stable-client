@@ -51,7 +51,7 @@ module.exports = function(environment) {
     ENV.APP.crossOriginWhitelist = ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users'];
   }
 
-  if (environment === 'staging') {
+  if (environment === 'production') {
     ENV.APP.host = 'http://pocket-stable-api.herokuapp.com';
     ENV.APP.serverTokenEndpoint = 'http://pocket-stable-api.herokuapp.com/users/sign_in';
     ENV.APP.crossOriginWhitelist = ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users'];
