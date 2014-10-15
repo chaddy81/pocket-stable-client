@@ -32,7 +32,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.APP.serverTokenEndpoint = 'http://0.0.0.0:3000/users/sign_in';
-    crossOriginWhitelist: ['http://0.0.0.0:3000', 'http://0.0.0.0:3000/api/users'];
+    ENV.APP.crossOriginWhitelist: ['http://0.0.0.0:3000', 'http://0.0.0.0:3000/api/users'];
   }
 
   if (environment === 'test') {
@@ -47,8 +47,14 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
+  if (environment === 'staging') {
+    ENV.APP.serverTokenEndpoint = 'http://pocket-stable-api.herokuapp.com/users/sign_in';
+    ENV.APP.crossOriginWhitelist: ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users'];
+  }
 
+  if (environment === 'production') {
+    ENV.APP.serverTokenEndpoint = 'http://0.0.0.0:3000/users/sign_in';
+    ENV.APP.crossOriginWhitelist: ['http://0.0.0.0:3000', 'http://0.0.0.0:3000/api/users'];
   }
 
   return ENV;
