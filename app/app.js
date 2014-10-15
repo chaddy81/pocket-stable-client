@@ -19,11 +19,6 @@ Ember.$.ajaxPrefilter(function(options, oriOpt, jqXHR) {
 });
 
 window.ENV = config;
-window.ENV['simple-auth-devise'] = {
-  authorizer: 'simple-auth-authorizer:devise',
-  serverTokenEndpoint: window.ENV.APP.serverTokenEndpoint,
-  crossOriginWhitelist: window.ENV.APP.crossOriginWhitelist
-}
 
 loadInitializers(App, config.modulePrefix);
 
