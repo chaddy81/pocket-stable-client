@@ -19,7 +19,7 @@ module.exports = function(environment) {
     }
   };
 
-  ENV['simple-auth'] = {
+  ENV['simple-auth-devise'] = {
     authorizer: 'simple-auth-authorizer:devise',
     serverTokenEndpoint: 'http://pocket-stable-api.herokuapp.com/',
     crossOriginWhitelist: ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users']

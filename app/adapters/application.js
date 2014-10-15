@@ -3,5 +3,5 @@ import ENV from '../config/environment';
 
 export default DS.RESTAdapter.extend({
   namespace: 'api',
-  host: ENV.APP.host
+  host: 'http://pocket-stable-api.herokuapp.com'
 });
