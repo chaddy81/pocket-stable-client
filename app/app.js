@@ -1,8 +1,15 @@
 import Ember from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
+import config from './config/environment';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
+
+var App = Ember.Application.extend({
+  modulePrefix: config.modulePrefix,
+  podModulePrefix: config.podModulePrefix,
+  Resolver: Resolver
+});
 
 Ember.$.ajaxPrefilter(function(options, oriOpt, jqXHR) {
   var session = JSON.parse(localStorage.getItem('ember_simple_auth:session'));
@@ -11,11 +18,6 @@ Ember.$.ajaxPrefilter(function(options, oriOpt, jqXHR) {
   }
 });
 
-var App = Ember.Application.extend({
-  modulePrefix: 'pocket-stable-client', // TODO: loaded via config
-  Resolver: Resolver
-});
-
-loadInitializers(App, 'pocket-stable-client');
+loadInitializers(App, config.modulePrefix);
 
 export default App;

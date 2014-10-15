@@ -2,10 +2,9 @@
   "predef": {
     "document": true,
     "window": true,
-    "Ember": true,
-    "PocketStableClientENV": true,
-    "ENV": true,
-    "moment": true
+    "-Promise": true,
+    "moment": true,
+    "$": true
   },
   "browser" : true,
   "boss" : true,

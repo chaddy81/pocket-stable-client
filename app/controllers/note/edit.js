@@ -33,7 +33,7 @@ export default Ember.Controller.extend({
     },
 
     cancel: function() {
-      this.transitionTo('note.index');
+      this.transitionToRoute('note.index');
     }
   }
 });

@@ -27,6 +27,5 @@
   },
   "_source": "git://github.com/simplabs/ember-simple-auth-component.git",
   "_target": "0.6.7",
-  "_originalSource": "ember-simple-auth",
-  "_direct": true
+  "_originalSource": "ember-simple-auth"
 }

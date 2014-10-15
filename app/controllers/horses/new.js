@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['application'],
   actions: {
     createHorse: function() {
       var avatar = this.get('avatar'),
@@ -37,15 +38,23 @@ export default Ember.Controller.extend({
                 comments: comments });
 
       horse.save().then(function() {
-        // self.set(horse,'');
+        self.get("controllers.application").notify({
+            title: "Success!",
+            message: "You have successfully created a horse.",
+            type: "alert-success"});
         self.transitionToRoute('horse', horse);
       },function(error) {
+        console.log(error.responseJSON.errors);
+        self.get("controllers.application").notify({
+            title: "Error!",
+            message: error.responseJSON.errors,
+            type: "alert-error"});
         console.log(error.responseText);
       });
     },
 
     cancel: function() {
-      this.transitionTo('horse.new');
+      this.transitionToRoute('horse.new');
     }
   }
 });

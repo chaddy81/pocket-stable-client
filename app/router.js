@@ -1,9 +1,8 @@
 import Ember from 'ember';
+import config from './config/environment';
 
-import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
-
-var Router = Ember.Router.extend(ApplicationRouteMixin, {
-  location: PocketStableClientENV.locationType
+var Router = Ember.Router.extend({
+  location: config.locationType
 });
 
 Router.map(function() {
@@ -36,13 +35,17 @@ Router.map(function() {
   this.resource('veterinarian', { path: 'veterinarians/:vet_id' }, function() {
     this.route('edit');
   });
+
   this.resource('photo', { path: '/horses/:horse_id/photos/:photo_id' });
+
   this.resource('documents', function() {
     this.route('new');
   });
+
   this.resource('document', { path: '/documents/:id' }, function() {
     this.route('edit');
   });
+
   this.route('signup');
   this.route('check-email');
   this.route('change-password');

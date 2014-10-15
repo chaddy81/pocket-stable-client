@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['horses'],
   actions: {
     createDocument: function() {
       alert($('input[name="filename"]').val());
@@ -26,7 +27,7 @@ export default Ember.Controller.extend({
     },
 
     cancel: function() {
-      this.transitionTo('documents.new');
+      this.transitionToRoute('documents.new');
     }
   }
 });

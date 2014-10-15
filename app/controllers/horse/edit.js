@@ -48,7 +48,17 @@ export default Ember.Controller.extend({
     },
 
     cancel: function() {
-      this.transitionTo('horse.index');
+      this.transitionToRoute('horse.index');
+    },
+
+    delete: function() {
+      var rec = this.get('model'),
+          self = this;
+
+      rec.deleteRecord();
+      rec.save().then(function () {
+        self.transitionToRoute('horses.index');
+      });
     }
   }
 });

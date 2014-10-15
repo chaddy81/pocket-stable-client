@@ -25,6 +25,5 @@ app.import('bower_components/ember-date-picker/dist/ember-date-picker.js');
 app.import('bower_components/ember-date-picker/dist/ember-date-picker.css');
 app.import('bower_components/ember-spin-box/dist/ember-spin-box.js');
 app.import('bower_components/ember-spin-box/dist/ember-spin-box.css');
-app.import('bower_components/ember-droplet/dist/ember-droplet.min.js')
 
 module.exports = app.toTree();

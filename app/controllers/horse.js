@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     edit: function() {
-      this.transitionTo('horse.edit');
+      this.transitionToRoute('horse.edit');
     }
   },
   title: 'Account Settings',

@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
     },
 
     cancel: function() {
-      this.transitionTo('note.new');
+      this.transitionToRoute('note.new');
     }
   }
 });

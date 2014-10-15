@@ -10,7 +10,10 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     },
 
     sessionAuthenticationFailed: function() {
-      this.triggerEvent('test');
+      this.get('container').lookup('controller:application').notify({
+            title: "Error!",
+            message: "Please use a valid username/password.",
+            type: "alert-error"});
     },
 
     sessionInvalidationSucceeded: function() {

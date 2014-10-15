@@ -4,8 +4,8 @@
     <ol class="card">
       <li class="card_info">
         {{#link-to 'horse' this.horse}}
-          {{#if horse.avatar.avatar.thumb.url}}
-            <img {{bind-attr src="horse.avatar.avatar.thumb.url"}} />
+          {{#if horse.avatar_thumb_url}}
+            <img {{bind-attr src="horse.avatar_thumb_url"}} />
           {{else}}
             <img src="assets/images/horseFPO.jpg" />
           {{/if}}
