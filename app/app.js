@@ -18,6 +18,8 @@ Ember.$.ajaxPrefilter(function(options, oriOpt, jqXHR) {
   }
 });
 
+window.ENV = config;
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;

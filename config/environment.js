@@ -21,7 +21,7 @@ module.exports = function(environment) {
 
   ENV['simple-auth-devise'] = {
     authorizer: 'simple-auth-authorizer:devise',
-    serverTokenEndpoint: 'http://pocket-stable-api.herokuapp.com/',
+    serverTokenEndpoint: 'http://pocket-stable-api.herokuapp.com',
     crossOriginWhitelist: ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users']
   }
 
@@ -52,13 +52,13 @@ module.exports = function(environment) {
     ENV.APP.LOG_ACTIVE_GENERATION = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.APP.LOG_TRANSITIONS = true;
-    ENV.APP.host = 'http://pocket-stable-api.herokuapp.com/';
+    ENV.APP.host = 'http://pocket-stable-api.herokuapp.com';
     ENV.APP.serverTokenEndpoint = 'http://pocket-stable-api.herokuapp.com/users/sign_in';
     ENV.APP.crossOriginWhitelist = ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users'];
   }
 
   if (environment === 'staging') {
-    ENV.APP.host = 'http://pocket-stable-api.herokuapp.com/';
+    ENV.APP.host = 'http://pocket-stable-api.herokuapp.com';
     ENV.APP.serverTokenEndpoint = 'http://pocket-stable-api.herokuapp.com/users/sign_in';
     ENV.APP.crossOriginWhitelist = ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users'];
   }
