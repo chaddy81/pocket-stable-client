@@ -19,12 +19,6 @@ module.exports = function(environment) {
     }
   };
 
-  ENV['simple-auth-devise'] = {
-    authorizer: 'simple-auth-authorizer:devise',
-    serverTokenEndpoint: 'http://pocket-stable-api.herokuapp.com',
-    crossOriginWhitelist: ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users']
-  }
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
