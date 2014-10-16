@@ -1,43 +1,55 @@
 <div class="container">
-  <ul class="standard_list_left">
-    <li>Horse Avatar</li>
-    <li>Nick Name</li>
-    <li>Name</li>
-    <li>Breed</li>
-    <li>Reg. Number</li>
-    <li>Sex</li>
-    <li>Fertility</li>
-    <li>Foaling Date</li>
-    <li>Color</li>
-    <li>Date of Birth</li>
-    <li>Markings</li>
-    <li>Org Numbers</li>
-    <li>Emergencies</li>
-    <li>Comments</li>
-  </ul>
-
-  <form enctype="multipart/form-data" {{action 'createHorse' on='submit'}}>
-    <ul class="standard_list_right">
-      <li>{{view 'upload-file' name="avatar" file=avatar }}</li>
-      <li>{{input id='nick_name' placeholder='Nick Name' value=nick_name class="login_field"}}</li>
-      <li>{{input id='name' placeholder='Name' value=name class="login_field"}}</li>
-      <li>{{input id='breed' placeholder='Breed' value=breed class="login_field"}}</li>
-      <li>{{input id='registration_number' placeholder='Registration Number' value=registration_number class="login_field"}}</li>
-      <li>{{input id='sex' placeholder='Sex' value=sex class="login_field"}}</li>
-      <li>{{input id='fertility' placeholder='Fertility' value=fertility class="login_field"}}</li>
+  <form id="horse_info" enctype="multipart/form-data" {{action 'createHorse' on='submit'}}>
+    <ul class="standard_list">
       <li>
-        {{date-picker-input controls="my-datepicker" placeholder="Foaling Date" value=foaling_date class="login_field"}}
+        <label>Horse Avatar</label>
+        {{view 'upload-file' name="avatar" file=avatar }}
+      </li>
+      <li>
+        <label>Nick Name</label>
+        {{input id='nick_name' placeholder='Nick Name' value=nick_name class="login_field"}}</li>
+      <li>
+        <label>Name</label>
+        {{input id='name' placeholder='Name' value=name class="login_field"}}</li>
+      <li>
+        <label>Breed</label>
+        {{input id='breed' placeholder='Breed' value=breed class="login_field"}}</li>
+      <li>
+        <label>Reg. Number</label>
+        {{input id='registration_number' placeholder='Registration Number' value=registration_number class="login_field"}}</li>
+      <li>
+        <label>Sex</label>
+        {{input id='sex' placeholder='Sex' value=sex class="login_field"}}</li>
+      <li>
+        <label>Fertility</label>
+        {{input id='fertility' placeholder='Fertility' value=fertility class="login_field"}}</li>
+      {{!-- <li>{{input id='foalingDate' placeholder='Foaling Date' value=foaling_date class="login_field"}}</li> --}}
+      <li>
+        <label>Foaling Date</label>
+        {{date-picker-input controls="my-datepicker" value=foaling_date class="login_field"}}
         {{date-picker-controls id="my-datepicker"}}
       </li>
-      <li>{{input id='color' placeholder='Color' value=color class="login_field"}}</li>
       <li>
-        {{date-picker-input controls="birth-date" placeholder="Birth Date" value=date_of_birth class="login_field"}}
+        <label>Color</label>
+        {{input id='color' placeholder='Color' value=color class="login_field"}}</li>
+      {{!-- <li>{{input id='birthDate' placeholder='Birth Date' value=date_of_birth class="login_field"}}</li> --}}
+      <li>
+        <label>Date of Birth</label>
+        {{date-picker-input controls="birth-date" value=date_of_birth class="login_field"}}
         {{date-picker-controls id="birth-date"}}
       </li>
-      <li>{{input id='markings' placeholder='Markings' value=markings class="login_field"}}</li>
-      <li>{{input id='org_numbers' placeholder='Org Numbers' value=org_numbers class="login_field"}}</li>
-      <li>{{input id='emergencies' placeholder='Emergencies' value=emergencies class="login_field"}}</li>
-      <li>{{input id='comments' placeholder='Comments' value=comments class="login_field"}}</li>
+      <li>
+        <label>Markings</label>
+        {{input id='markings' placeholder='Markings' value=markings class="login_field"}}</li>
+      <li>
+        <label>Org Numbers</label>
+        {{input id='org_numbers' placeholder='Org Numbers' value=org_numbers class="login_field"}}</li>
+      <li>
+        <label>Emergencies</label>
+        {{input id='emergencies' placeholder='Emergencies' value=emergencies class="login_field"}}</li>
+      <li>
+        <label>Comments</label>
+        {{input id='comments' placeholder='Comments' value=comments class="login_field"}}</li>
     </ul>
     <input class="red" type="submit" value="Save" />
     <button class="outline" {{action 'cancel'}}>Cancel</button>

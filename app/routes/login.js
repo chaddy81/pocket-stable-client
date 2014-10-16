@@ -5,5 +5,8 @@ export default Ember.Route.extend({
     if (this.get('session').isAuthenticated) {
       this.transitionTo('horses');
     }
+  },
+  renderTemplate: function() {
+    this.render('login');
   }
 });

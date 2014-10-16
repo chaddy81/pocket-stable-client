@@ -4,6 +4,7 @@ import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
   needs: ["application"],
+
   actions: {
     sessionAuthenticationSucceeded: function() {
       this.transitionTo('horses');
@@ -18,6 +19,14 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 
     sessionInvalidationSucceeded: function() {
       this.transitionTo('login');
+    },
+
+    didTransition: function() {
+      console.log(this.get('session'));
+      if ($('.pushy.pushy-open').length) {
+        $('.pushy.pushy-open').removeClass('pushy-open').addClass('pushy-left');
+        $('body').removeClass('pushy-active');
+      }
     }
   }
 });

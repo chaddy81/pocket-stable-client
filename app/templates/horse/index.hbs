@@ -1,43 +1,95 @@
 <div class="horse_profilephoto"><img {{bind-attr src="model.avatar_profile_url"}} /></div>
 <div class="container">
-<ul class="standard_list_left">
-  <li>Name</li>
-  <li>Breed</li>
-  <li>Reg. Number</li>
-  <li>Sex</li>
-  <li>Fertility</li>
-  <li>Foaling Date</li>
-  <li>Color</li>
-  <li>Date of Birth</li>
-  <li>Markings</li>
-  <li>Org Numbers</li>
-  <li>Emergencies</li>
-  <li>Comments</li>
-  <li>Share Links</li>
-</ul>
+  {{!-- <ul class="standard_list_left">
+    <li>Name</li>
+    <li>Breed</li>
+    <li>Reg. Number</li>
+    <li>Sex</li>
+    <li>Fertility</li>
+    <li>Foaling Date</li>
+    <li>Color</li>
+    <li>Date of Birth</li>
+    <li>Markings</li>
+    <li>Org Numbers</li>
+    <li>Emergencies</li>
+    <li>Comments</li>
+    <li>Share Links</li>
+  </ul> --}}
 
-<ul class="standard_list_right">
-<li>{{model.name}}</li>
-<li>{{model.breed}}</li>
-<li>{{model.registration_number}}</li>
-<li>{{model.sex}}</li>
-<li>{{model.fertility}}</li>
-<li>{{foalingDate}}</li>
-<li>{{model.color}}</li>
-<li>{{birthDate}}</li>
-<li>{{model.markings}}</li>
-<li>{{model.org_numbers}}</li>
-<li>{{model.emergencies}}</li>
-<li>{{model.comments}}</li>
-<li>youtu.be</li>
-</ul>
+  <ul class="standard_list">
+    <li>
+      <span>Name</span>
+      {{model.name}}
+    </li>
 
-<ul class="list_buttons">
-  <a href="#"><li>Weight History</li></a>
-  <a href="stableinformation.html"><li>Stable Information</li></a>
-  <a href="healthinformation.html"><li>Health Information</li></a>
-  <a href="feedingrecords.html"><li>Feeding Records</li></a>
-  <a href="#"><li>Documents</li></a>
-  <a href="#"><li>Photos</li></a>
-</ul>
+    <li>
+      <span>Breed</span>
+      {{model.breed}}
+    </li>
+
+    <li>
+      <span>Reg. Number</span>
+      {{model.registration_number}}
+    </li>
+
+    <li>
+      <span>Sex</span>
+      {{model.sex}}
+    </li>
+
+    <li>
+      <span>Fertility</span>
+      {{model.fertility}}
+    </li>
+
+    <li>
+      <span>Foaling Date</span>
+      {{foalingDate}}
+    </li>
+
+    <li>
+      <span>Color</span>
+      {{model.color}}
+    </li>
+
+    <li>
+      <span>Date of Birth</span>
+      {{birthDate}}
+    </li>
+
+    <li>
+      <span>Markings</span>
+      {{model.markings}}
+    </li>
+
+    <li>
+      <span>Org Numbers</span>
+      {{model.org_numbers}}
+    </li>
+
+    <li>
+      <span>Emergencies</span>
+      {{model.emergencies}}
+    </li>
+
+    <li>
+      <span>Comments</span>
+      {{model.comments}}
+    </li>
+
+    <li>
+      <span>Share Links</span>
+      youtu.be
+    </li>
+
+  </ul>
+
+  <ul class="list_buttons">
+    <a href="#"><li>Weight History</li></a>
+    <a href="stableinformation.html"><li>Stable Information</li></a>
+    <a href="healthinformation.html"><li>Health Information</li></a>
+    <a href="feedingrecords.html"><li>Feeding Records</li></a>
+    <a href="#"><li>Documents</li></a>
+    <a href="#"><li>Photos</li></a>
+  </ul>
 </div>

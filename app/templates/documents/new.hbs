@@ -1,17 +1,18 @@
 <div class="container">
-  <ul class="standard_list_left">
-    <li>Document Name</li>
-    <li>File</li>
-    <li>Tags (comma separated)</li>
-    <li>Link to Horse</li>
-  </ul>
-
-  <form enctype="multipart/form-data" {{action 'createDocument' on='submit'}}>
-    <ul class="standard_list_right">
-      <li>{{input id='name' placeholder='Name' value=name class="login_field"}}</li>
-      <li>{{view 'upload-file' name="file" file=file }}</li>
-      <li>{{input id='tags' placeholder='Tags' value=tags class="login_field"}}</li>
+  <form id="documents" enctype="multipart/form-data" {{action 'createDocument' on='submit'}}>
+    <ul class="standard_list">
       <li>
+        <label>Document Name</label>
+        {{input id='name' placeholder='Name' value=name class="login_field"}}</li>
+      <li>
+        <label>File</label>
+        {{view 'upload-file' name="file" file=file }}</li>
+      <li>
+        <label>Tags</label>
+        {{input id='tags' placeholder='Tags' value=tags class="login_field"}}</li>
+      <li>
+        <label>Link to Horse</label>
+
         <div class="styled-select">
           {{view Ember.Select contentBinding="content" optionLabelPath="content.name" optionValuePath="content.id" prompt="Link to Horse"}}
           <div class="chevron"></div>

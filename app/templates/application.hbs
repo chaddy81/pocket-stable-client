@@ -8,33 +8,29 @@
   </div>
 {{/if}}
 
-{{#if session.isAuthenticated }}
-  <nav class="pushy pushy-left">
+<nav class="pushy pushy-left">
 
-    <div class="nav_user">
-      <p>{{session.user_name}}</p>
-      <p class="user_account">{{#link-to 'account-settings'}}<img src="assets/images/gear.png" />{{/link-to}}</p>
-    </div>
-
-    <ul>
-        <li>{{#link-to 'horses'}}My Horses{{/link-to}}</li>
-        <li>{{#link-to 'veterinarians'}}Veterinarians{{/link-to}}</li>
-        <li>{{#link-to 'documents'}}Documents{{/link-to}}</li>
-        <li>{{#link-to 'notes'}}Notes{{/link-to}}</li>
-        {{!-- <li>{{#link-to "links"}}Links{{/link-to}}</li> --}}
-    </ul>
-
-    <ul>
-      <li><a {{action 'invalidateSession'}}>Logout</a></li>
-    </ul>
-  </nav>
-
-  <div class="site-overlay"></div>
-
-  <div id="push_wrap">
-    {{outlet header}}
-{{/if}}
-{{outlet}}
-{{#if session.isAuthenticateded }}
+  <div class="nav_user">
+    <p>{{session.user_name}}</p>
+    <p class="user_account">{{#link-to 'account-settings'}}<img src="assets/images/gear.png" />{{/link-to}}</p>
   </div>
-{{/if}}
+
+  <ul>
+    <li>{{#link-to 'horses'}}My Horses{{/link-to}}</li>
+    <li>{{#link-to 'veterinarians'}}Veterinarians{{/link-to}}</li>
+    <li>{{#link-to 'documents'}}Documents{{/link-to}}</li>
+    <li>{{#link-to 'notes'}}Notes{{/link-to}}</li>
+    {{!-- <li>{{#link-to "links"}}Links{{/link-to}}</li> --}}
+  </ul>
+
+  <ul>
+    <li><a {{action 'invalidateSession'}}>Logout</a></li>
+  </ul>
+</nav>
+
+<div class="site-overlay"></div>
+
+<div id="push_wrap">
+  {{outlet header}}
+  {{outlet}}
+</div>
