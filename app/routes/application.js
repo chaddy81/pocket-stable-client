@@ -27,6 +27,14 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
         $('.pushy.pushy-open').removeClass('pushy-open').addClass('pushy-left');
         $('body').removeClass('pushy-active');
       }
+
+      if($('body').hasClass('fullwhite')) {
+        $('body').removeClass('fullwhite');
+      }
+    },
+
+    goBack: function(){
+      window.history.back();
     }
   }
 });

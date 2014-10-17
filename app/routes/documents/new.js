@@ -11,8 +11,9 @@ export default Ember.Route.extend({
   },
 
   renderTemplate: function() {
-    this.render('basic-header', {
-      outlet: 'header'
+    this.render('back-header', {
+      outlet: 'header',
+      into: 'application'
     });
 
     this.render();

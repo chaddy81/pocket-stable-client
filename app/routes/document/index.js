@@ -10,11 +10,12 @@ export default Ember.Route.extend({
   },
 
   renderTemplate: function() {
-    this.render('basic-header-edit', {
-      outlet: 'header'
+    this.render('back-header', {
+      outlet: 'header',
+      into: 'application'
     });
 
-    this.render();
+    this.render('document/index');
   }
 
 });

@@ -54,13 +54,10 @@ Router.map(function() {
   this.route('change-password');
   this.route('cancel-account');
   this.route('account-settings');
-  this.route('feeding-records');
   this.route('payment');
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
-  this.route('documents/new');
-  this.resource('horse/photos', function() { });
 });
 
 export default Router;

@@ -10,14 +10,14 @@
       <li>
         <label>Tags</label>
         {{input id='tags' placeholder='Tags' value=tags class="login_field"}}</li>
-      <li>
+      {{!-- <li>
         <label>Link to Horse</label>
 
         <div class="styled-select">
           {{view Ember.Select contentBinding="content" optionLabelPath="content.name" optionValuePath="content.id" prompt="Link to Horse"}}
           <div class="chevron"></div>
         </div>
-      </li>
+      </li> --}}
     </ul>
     {{input type="hidden" value=filename name="filename"}}
     <input class="red" type="submit" value="Save" />
