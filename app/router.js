@@ -60,6 +60,7 @@ Router.map(function() {
   this.route('upgrade-account');
   this.route('password-changed');
   this.route('documents/new');
+  this.resource('horse/photos', function() { });
 });
 
 export default Router;
