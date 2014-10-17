@@ -26,6 +26,9 @@ Router.map(function() {
     this.route('weight-calculator');
     this.route('links');
     this.route('photos');
+    this.route('stable-information');
+    this.route('health-information');
+    this.route('feeding-records');
   });
 
   this.resource('veterinarians', function() {

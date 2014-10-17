@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
 
       var self = this;
 
-      var note = this.get('store').find('note', this.get('model.id')).then(function(note, error) {
+      this.get('store').find('note', this.get('model.id')).then(function(note) {
         note.set('title', title);
         note.set('date', date);
         note.set('start_time', start_time);

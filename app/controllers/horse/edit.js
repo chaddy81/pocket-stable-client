@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
 
       var self = this;
 
-      var horse = this.get('store').find('horse', this.get('model.id')).then(function(horse, error) {
+      this.get('store').find('horse', this.get('model.id')).then(function(horse) {
         horse.set('name', name);
         horse.set('nick_name', nick_name);
         horse.set('sex', sex);

@@ -3,5 +3,5 @@ import ENV from '../config/environment';
 
 export default DS.RESTAdapter.extend({
   namespace: 'api',
-  host: window.ENV.APP.host
+  host: ENV.APP.host
 });
