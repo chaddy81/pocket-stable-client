@@ -85,7 +85,7 @@
   </ul>
 
   <ul class="list_buttons">
-    <a href="#"><li>Weight History</li></a>
+    {{#link-to 'horse.weight-history' model}}<li>Weight History</li>{{/link-to}}
     {{#link-to 'horse.stable-information' model}}<li>Stable Information</li>{{/link-to}}
     {{#link-to 'horse.health-information' model}}<li>Health Information</li>{{/link-to}}
     {{#link-to 'horse.feeding-records' model}}<li>Feeding Records</li>{{/link-to}}

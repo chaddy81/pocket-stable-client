@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('logout');
+  this.route('forgot-password');
+  this.route('reset-password');
 
   this.resource('notes', function() {
     this.route('new');
@@ -24,6 +26,7 @@ Router.map(function() {
   this.resource('horse', { path: '/horses/:horse_id' }, function() {
     this.route('edit');
     this.route('weight-calculator');
+    this.route('weight-history');
     this.route('links');
     this.route('photos');
     this.route('stable-information');
