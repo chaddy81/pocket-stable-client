@@ -16,5 +16,6 @@ export default DS.Model.extend({
   emergencies: DS.attr(),
   comments: DS.attr(),
   avatar_thumb_url: DS.attr(),
-  avatar_profile_url: DS.attr()
+  avatar_profile_url: DS.attr(),
+  weights: DS.hasMany('weight')
 });

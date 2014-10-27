@@ -12,9 +12,8 @@ export default Ember.Controller.extend({
         type: 'POST',
         url: ENV.APP.host + '/api/users/forgot_password',
         data: {email: email},
-        success: function(data) {
+        success: function() {
           self.get("controllers.application").notify({
-            // title: "Error!",
             message: "Instructions have been sent to your email",
             type: "alert-success"});
           self.transitionTo('login');

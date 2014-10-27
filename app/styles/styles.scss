@@ -700,7 +700,7 @@ label.css-label {
   float: left;
 }
 
-#horse_info input, input[type="date"], #feeding_records input, #stable_info input, #documents input {
+#horse_info input[type="text"], input[type="date"], #feeding_records input[type="text"], #stable_info input[type="text"], #documents input[type="text"] {
   text-align: right;
   -webkit-appearance: none;
   border-radius: 0;

@@ -15,6 +15,7 @@
     "qunit": "~1.15.0",
     "ember-simple-auth": "0.6.7",
     "ember-date-picker": "~0.0.4",
-    "moment": "^2.0.0"
+    "moment": "^2.0.0",
+    "ember-charts": "~0.3.0"
   }
 }

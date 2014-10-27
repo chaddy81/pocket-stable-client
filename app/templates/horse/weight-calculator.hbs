@@ -3,17 +3,17 @@
     <form>
       <p>
         <label>Heart Girth</label>
-        <input class="login_field" name="girth" placeholder="0" /> in.
+        {{input class="login_field" name="girth" placeholder="0" value=girth}} in.
       </p>
       <p>
         <label>Body Length</label>
-        <input class="login_field" name="length" placeholder="0" /> in.
+        {{input class="login_field" name="length" placeholder="0" value=length}} in.
       </p>
       <p>
         <label>Estimated Weight</label>
-        <input class="login_field" name="weight" placeholder="0" /> lb.
+        {{input class="login_field" name="weight" placeholder="0" value=weight }} lb.
       </p>
-      <input class="red" type="submit" value="Record Weight" />
+      <input class="red" type="submit" value="Record Weight" {{action 'submitWeight'}} />
     </form>
   </div>
 </div>

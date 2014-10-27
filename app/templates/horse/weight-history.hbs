@@ -1,4 +1,11 @@
 <div class="container">
   <div class="page_title">Weight History</div>
-  Add graph and button here
+  {{#if dataArray}}
+    {{vertical-bar-chart data=dataArray}}
+  {{else}}
+    <h3 class="align-center">No Weight History Available</h3>
+  {{/if}}
+  <div class="align-center">
+    {{#link-to 'horse.weight-calculator' model.horse}}<button class="red">Add Weight</button>{{/link-to}}
+  </div>
 </div>

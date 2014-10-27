@@ -12,5 +12,11 @@ export default Ember.Controller.extend({
     var birth = this.get('model.date_of_birth');
 
     return moment(birth).format("MM/DD/YYYY");
-  }.property('model.date_of_birth')
+  }.property('model.date_of_birth'),
+
+  actions: {
+    edit: function() {
+      this.transitionToRoute('horse.edit');
+    }
+  }
 });
