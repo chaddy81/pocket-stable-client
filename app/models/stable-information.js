@@ -8,4 +8,5 @@ export default DS.Model.extend({
   hay: DS.attr(),
   feed: DS.attr(),
   supplements: DS.attr(),
+  horses: DS.belongsTo('horse', {embedded: 'always'})
 });

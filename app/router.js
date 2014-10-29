@@ -29,7 +29,9 @@ Router.map(function() {
     this.route('weight-history');
     this.route('links');
     this.route('photos');
-    this.route('stable-information');
+    this.resource('stable-information', { path: 'stable-information' }, function() {
+      this.route('edit');
+    });
     this.route('health-information');
     this.route('feeding-records');
   });

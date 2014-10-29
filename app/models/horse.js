@@ -17,5 +17,6 @@ export default DS.Model.extend({
   comments: DS.attr(),
   avatar_thumb_url: DS.attr(),
   avatar_profile_url: DS.attr(),
-  weights: DS.hasMany('weight')
+  weights: DS.hasMany('weight'),
+  stable_information: DS.hasMany('stable-information', {embedded: 'always'})
 });

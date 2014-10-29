@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="page_title">Stable Information</div>
+  <form id="horse_info" {{action 'editStable' on='submit'}}>
+    <ul class="standard_list">
+      <li>
+        <label>Last Farrier</label>
+        {{input id='last_farrier' placeholder='Last Farrier' value=farrierDate class="login_field"}}
+      </li>
+      <li>
+        <label>Farrier Name</label>
+        {{input id='farrier_name' placeholder='Farrier Name' value=model.farrier_name class="login_field"}}
+      </li>
+      <li>
+        <label>Farrier Phone</label>
+        {{input id='farrier_phone' placeholder='Farrier Phone' value=model.farrier_phone class="login_field"}}
+      </li>
+      <li>
+        <label>Farrier Interval</label>
+        {{input id='farrier_interval' placeholder='Farrier Interval' value=model.farrier_interval class="login_field"}}
+      </li>
+      <li>
+        <label>Hay</label>
+        {{input id='hay' placeholder='Hay' value=model.hay class="login_field"}}
+      </li>
+      <li>
+        <label>Feed</label>
+        {{input id='feed' placeholder='Feed' value=model.feed class="login_field"}}
+      </li>
+      <li>
+        <label>Supplements</label>
+        {{input id='supplements' placeholder='Supplements' value=model.supplements class="login_field"}}
+      </li>
+    </ul>
+    <input class="red" type="submit" value="Save">
+    <button class="outline" {{action 'cancel'}}>Cancel</button>
+  </form>
+</div>
