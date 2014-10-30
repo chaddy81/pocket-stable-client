@@ -17,5 +17,4 @@ export default Ember.Route.extend({
 
     this.render('horse/edit');
   }
-
 });

@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function () {
-    return this.modelFor('horse');
+  model: function() {
+    return this.store.find('health-information', this.modelFor('horse').id);
   },
 
   setupController: function (controller, model) {
@@ -10,18 +10,11 @@ export default Ember.Route.extend({
   },
 
   renderTemplate: function() {
-    this.render('basic-header-edit', {
+    this.render('back-header', {
       outlet: 'header',
       into: 'application'
     });
 
-    this.render('horse/index');
-  },
-
-  actions: {
-    error: function(error) {
-      console.log(error);
-    }
+    this.render('health-information/edit');
   }
-
 });

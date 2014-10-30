@@ -18,5 +18,6 @@ export default DS.Model.extend({
   avatar_thumb_url: DS.attr(),
   avatar_profile_url: DS.attr(),
   weights: DS.hasMany('weight'),
-  stable_information: DS.hasMany('stable-information', {embedded: 'always'})
+  stable_information: DS.hasMany('stable-information', {embedded: 'always'}),
+  health_information: DS.hasMany('health-information', {embedded: 'always'})
 });

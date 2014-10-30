@@ -32,7 +32,9 @@ Router.map(function() {
     this.resource('stable-information', { path: 'stable-information' }, function() {
       this.route('edit');
     });
-    this.route('health-information');
+    this.resource('health-information', { path: 'health-information' }, function() {
+      this.route('edit');
+    });
     this.route('feeding-records');
   });
 

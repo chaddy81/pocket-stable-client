@@ -34,6 +34,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     },
 
     goBack: function(){
+      console.log(window.history.state.path);
       window.history.back();
     }
   }
