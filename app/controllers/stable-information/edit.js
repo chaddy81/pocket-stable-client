@@ -41,6 +41,10 @@ export default Ember.Controller.extend({
           console.log(error);
         });
       });
+    },
+
+    cancel: function() {
+      this.transitionToRoute('stable-information.index');
     }
   }
 });
