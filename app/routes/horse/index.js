@@ -16,12 +16,6 @@ export default Ember.Route.extend({
     });
 
     this.render('horse/index');
-  },
-
-  actions: {
-    error: function(error) {
-      console.log(error);
-    }
   }
 
 });

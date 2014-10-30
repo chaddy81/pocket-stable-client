@@ -161,7 +161,7 @@ input {
 
 .standard_list li {
   text-align: right;
-  padding: 20px 16px 0 0;
+  padding: 10px 16px 8px 0;
   margin: 10px 0;
   background: #fff;
   height: 40px;
@@ -698,14 +698,15 @@ label.css-label {
   color: #980921;
   height: 20px;
   float: left;
+  line-height: 38px;
 }
 
-#horse_info input[type="text"], input[type="date"], #feeding_records input[type="text"], #stable_info input[type="text"], #documents input[type="text"] {
+#horse_info input[type="text"], input[type="date"], input[type="file"], #feeding_records input[type="text"], #stable_info input[type="text"], #documents input[type="text"] {
   text-align: right;
   -webkit-appearance: none;
   border-radius: 0;
   -webkit-border-radius: 0;
-  margin: 1%;
+  margin: 0 1%;
   width: 50%;
   color: #333;
   background: #F0F0EF;

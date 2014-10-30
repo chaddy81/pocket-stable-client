@@ -36,6 +36,7 @@ Router.map(function() {
       this.route('edit');
     });
     this.route('feeding-records');
+    // this.route('documents');
   });
 
   this.resource('veterinarians', function() {

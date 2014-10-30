@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.findAll('document');
+    return this.modelFor('document');
   },
 
   setupController: function(controller, model) {
@@ -16,6 +16,6 @@ export default Ember.Route.extend({
       into: 'application'
     });
 
-    this.render();
+    this.render('documents/new');
   }
 });
