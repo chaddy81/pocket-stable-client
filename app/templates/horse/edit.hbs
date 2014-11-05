@@ -52,8 +52,8 @@
         <label>Comments</label>
         {{input id='comments' placeholder='Comments' value=model.comments class="login_field"}}</li>
     </ul>
+    <input class="red" type="submit" value="Save">
+    <button class="outline" {{action 'cancel'}}>Cancel</button>
+    <button class="outline" {{action 'delete'}}>Remove Horse</button>
   </form>
-  <input class="red" type="submit" value="Save">
-  <button class="outline" {{action 'cancel'}}>Cancel</button>
-  <button class="outline" {{action 'delete'}}>Remove Horse</button>
 </div>
