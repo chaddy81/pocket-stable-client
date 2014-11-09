@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   needs: ['horses'],
+  title: 'Add Document',
   actions: {
     createDocument: function() {
       alert($('input[name="filename"]').val());

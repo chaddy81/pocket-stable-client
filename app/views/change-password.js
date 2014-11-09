@@ -6,7 +6,6 @@ export default Ember.View.extend({
     Ember.run.scheduleOnce('afterRender', this, this.afterRenderEvent);
   },
   afterRenderEvent : function(){
-    Ember.$('.section_title').text('Change Password');
     Ember.$('body').addClass('fullwhite');
   }
 });

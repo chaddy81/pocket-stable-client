@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   needs: ['note/index'],
+
+  title: "Notes",
+
   formattedDate: function() {
     var date = this.get('model.date');
 

@@ -3,32 +3,36 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: ['application'],
 
+  title: function() {
+    return this.get('model.horse.name');
+  }.property('model.horse.name'),
+
   actions: {
     editHealth: function() {
-      var last_dentist = this.get('model.last_dentist'),
-          dentist_name = this.get('model.dentist_name'),
-          dentist_phone = this.get('model.dentist_phone'),
-          dentist_interval = this.get('model.dentist_interval'),
-          last_coggins = this.get('model.last_coggins'),
-          last_deworming = this.get('model.last_deworming'),
-          last_tetanus = this.get('model.last_tetanus'),
-          last_rabies = this.get('model.last_rabies'),
-          last_vew = this.get('model.last_vew'),
-          last_botulism = this.get('model.last_botulism'),
-          last_potomac = this.get('model.last_potomac'),
-          last_strangles = this.get('model.last_strangles'),
-          last_anthrax = this.get('model.last_anthrax'),
-          last_rhino_flu = this.get('model.last_rhino_flu'),
-          rhino_interval = this.get('model.rhino_interval'),
-          last_west_nile = this.get('model.last_west_nile'),
-          west_nile_interval = this.get('model.west_nile_interval'),
-          other_vacc = this.get('model.other_vacc'),
-          health_comments = this.get('model.health_comments');
+      var last_dentist = this.get('model.health_info.last_dentist'),
+          dentist_name = this.get('model.health_info.dentist_name'),
+          dentist_phone = this.get('model.health_info.dentist_phone'),
+          dentist_interval = this.get('model.health_info.dentist_interval'),
+          last_coggins = this.get('model.health_info.last_coggins'),
+          last_deworming = this.get('model.health_info.last_deworming'),
+          last_tetanus = this.get('model.health_info.last_tetanus'),
+          last_rabies = this.get('model.health_info.last_rabies'),
+          last_vew = this.get('model.health_info.last_vew'),
+          last_botulism = this.get('model.health_info.last_botulism'),
+          last_potomac = this.get('model.health_info.last_potomac'),
+          last_strangles = this.get('model.health_info.last_strangles'),
+          last_anthrax = this.get('model.health_info.last_anthrax'),
+          last_rhino_flu = this.get('model.health_info.last_rhino_flu'),
+          rhino_interval = this.get('model.health_info.rhino_interval'),
+          last_west_nile = this.get('model.health_info.last_west_nile'),
+          west_nile_interval = this.get('model.health_info.west_nile_interval'),
+          other_vacc = this.get('model.health_info.other_vacc'),
+          health_comments = this.get('model.health_info.health_comments');
 
 
       var self = this;
 
-      this.store.find('health-information', this.get('model').id).then(function(health) {
+      this.store.find('health-information', this.get('model.health_info').id).then(function(health) {
 
         health.set('last_dentist', last_dentist);
         health.set('dentist_name', dentist_name);

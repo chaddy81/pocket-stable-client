@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: ['horse', 'application'],
 
+  title: function() {
+    return this.get('model.horse.name');
+  }.property('model.horse.name'),
+
   actions: {
     submitWeight: function() {
       var weight = this.get('weight');

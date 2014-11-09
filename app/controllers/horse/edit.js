@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: ['horse', 'application'],
 
+  title: function() {
+    return this.get('model.nick_name');
+  }.property('model.nick_name'),
+
   actions: {
     updateHorse: function() {
       var name = this.get('model.name'),

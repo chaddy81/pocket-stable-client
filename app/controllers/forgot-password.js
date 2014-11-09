@@ -3,6 +3,7 @@ import ENV from '../config/environment';
 
 export default Ember.Controller.extend({
   needs: ['application'],
+  title: "Forgot Password?",
   actions: {
     sendEmail: function() {
       var email = this.get('email'),

@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
     return moment(farrier_date).format("MM/DD/YYYY");
   }.property('model.last_farrier'),
 
+  title: function() {
+    return this.get('model.horse.name');
+  }.property('model.horse.name'),
+
   actions: {
     editStable: function() {
       var last_farrier = this.get('model.last_farrier'),

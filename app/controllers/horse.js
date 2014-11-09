@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-
-  title: 'Account Settings',
   foalingDate: function() {
     var foaling = this.get('model.foaling_date');
 

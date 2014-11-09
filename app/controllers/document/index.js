@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: ['document', 'application'],
 
+  title: function() {
+    return this.get('model.name');
+  }.property('model.name'),
+
   actions: {
     removeDocument: function() {
       var rec = this.get('model'),

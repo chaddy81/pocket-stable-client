@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   needs: ['application'],
   queryParams: ['reset_password_token'],
   reset_password_token: null,
+  title: "Reset Password",
   actions: {
     sendPassword: function() {
       var password = this.get('password'),

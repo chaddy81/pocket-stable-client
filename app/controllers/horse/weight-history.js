@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  title: function() {
+    return this.get('model.horse.name');
+  }.property('model.horse.name'),
+
   dataArray: function() {
     var data = this.get('model.weights'),
         dataArray = [];
