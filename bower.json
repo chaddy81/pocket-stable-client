@@ -22,5 +22,8 @@
     "handlebars": "~1.3.0",
     "ember": "1.7.0",
     "jquery": "^1.11.1"
+  },
+  "devDependencies": {
+    "select2": "~3.5.2"
   }
 }

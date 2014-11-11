@@ -750,6 +750,35 @@ form#account_settings input, .state {
   font-size: 14px;
 }
 
+.select2-container-multi {
+  color: #333;
+  float: right;
+  margin: 0 1%;
+  width: 53%;
+}
+
+.select2-choices {
+  background-image: none !important;
+  border-color: #E1E1DD !important;
+  padding-right: 0 !important;
+}
+
+.select2-search-choice {
+  height: auto !important;
+  line-height: 22px !important;
+}
+
+.select2-search-field {
+  height: auto !important;
+
+  input[type=text] {
+    border: none !important;
+    font-family: "proxima_nova_rgregular", sans-serif !important;
+    font-size: 14px;
+    margin: 0 0 0 1px !important;
+  }
+}
+
 @media all and (min-width: 768px) {
   .container {
     width: 768px;

@@ -36,6 +36,7 @@ Router.map(function() {
       this.route('edit');
     });
     this.route('feeding-records');
+    this.route('documents');
     // this.route('documents');
   });
 
@@ -66,6 +67,7 @@ Router.map(function() {
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
+  this.route('horse/documents');
 });
 
 export default Router;

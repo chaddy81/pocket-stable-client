@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
         dataArray = [];
     console.log(data);
 
-    data.forEach(function(num, index) {
+    data.forEach(function(num) {
       dataArray.push({'value': num._data.weight, 'label': moment(num._data.created_at).format('MMMM Do YYYY, h:mm:ss a')});
     });
 

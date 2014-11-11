@@ -4,7 +4,8 @@
     "window": true,
     "-Promise": true,
     "moment": true,
-    "$": true
+    "$": true,
+    "Bloodhound": true
   },
   "browser" : true,
   "boss" : true,

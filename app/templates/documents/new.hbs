@@ -3,13 +3,16 @@
     <ul class="standard_list">
       <li>
         <label>Document Name</label>
-        {{input id='name' placeholder='Name' value=name class="login_field"}}</li>
+        {{input id='name' placeholder='Name' value=name class="login_field"}}
+      </li>
       <li>
         <label>File</label>
-        {{view 'upload-file' name="file" file=file }}</li>
+        {{view 'upload-file' name="file" file=file }}
+      </li>
       <li>
-        <label>Tags</label>
-        {{input id='tags' placeholder='Tags' value=tags class="login_field"}}</li>
+        <label>Add to horse(s)</label>
+        {{type-ahead id="search" type="text" multiple="multiple" value=horses placeholder="Horses"}}
+      </li>
       {{!-- <li>
         <label>Link to Horse</label>
 

@@ -1,15 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  needs: ['horses'],
+  needs: ['horses', 'application'],
   title: 'Add Document',
   actions: {
     createDocument: function() {
-      alert($('input[name="filename"]').val());
       var name = this.get('name'),
           file = this.get('file'),
           filename = $('input[name="filename"]').val(),
-          tags = this.get('tags');
+          horses = this.get('horses');
 
       var self = this;
 
@@ -17,13 +16,15 @@ export default Ember.Controller.extend({
                 name: name,
                 file: file,
                 filename: filename,
-                tags: tags });
+                horses: horses });
 
       doc.save().then(function() {
-        // self.set(horse,'');
         self.transitionToRoute('document', doc);
-      },function(error) {
-        console.log(error.responseText);
+      }).catch(function(error) {
+        self.get("controllers.application").notify({
+            title: "Error!",
+            message: JSON.parse(error.responseText).errors,
+            type: "alert-error"});
       });
     },
 
