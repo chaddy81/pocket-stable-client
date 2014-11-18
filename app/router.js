@@ -30,6 +30,7 @@ Router.map(function() {
     this.route('links');
     this.resource('photos', function() {
       this.route('new');
+      this.resource('photo', { path: '/:photo_id' });
     });
     this.resource('stable-information', { path: 'stable-information' }, function() {
       this.route('edit');
@@ -50,8 +51,6 @@ Router.map(function() {
     this.route('edit');
   });
 
-  this.resource('photo', { path: '/horses/:horse_id/photos/:photo_id' });
-
   this.resource('documents', function() {
     this.route('new');
   });
@@ -69,8 +68,6 @@ Router.map(function() {
   this.route('stable-information');
   this.route('upgrade-account');
   this.route('password-changed');
-  this.route('horse/documents');
-  this.route('photos/new');
 });
 
 export default Router;

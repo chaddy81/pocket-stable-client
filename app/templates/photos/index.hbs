@@ -3,7 +3,7 @@
   <div class="photo_list">
     {{#each model.photos}}
       <div class="photo_card">
-        <img {{bind-attr src="image.image.url"}} />
+        {{#link-to 'photo' controller.horse this.id}}<img {{bind-attr src="image.image.url"}} />{{/link-to}}
       </div>
     {{/each}}
   </div>

@@ -1,4 +1,7 @@
-import { test, moduleFor } from 'ember-qunit';
+import {
+  moduleFor,
+  test
+} from 'ember-qunit';
 
 moduleFor('route:photo', 'PhotoRoute', {
   // Specify the other units that are required for this test.
