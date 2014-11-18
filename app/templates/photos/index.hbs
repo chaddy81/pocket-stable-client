@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="page_title">Photos</div>
+  <div class="photo_list">
+    {{#each model.photos}}
+      <div class="photo_card">
+        <img {{bind-attr src="image.image.url"}} />
+      </div>
+    {{/each}}
+  </div>
+</div>

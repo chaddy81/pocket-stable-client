@@ -41,6 +41,14 @@ input {
   border: none;
 }
 
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .align-center {
   text-align: center;
 }
@@ -688,6 +696,27 @@ label.css-label {
       font-size: 12px;
       line-height: 6px;
       color: #666;
+    }
+  }
+}
+
+.photo_list {
+  @extend .clearfix;
+
+  margin-top: 20px;
+
+  .photo_card {
+    background: #fff;
+    box-sizing:border-box;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    width:50%;
+
+    img {
+      display: inline-block;
+      height:auto;
+      max-width:100%;
     }
   }
 }

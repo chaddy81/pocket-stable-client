@@ -1,0 +1,15 @@
+<div class="container">
+  <form id="horse_info" enctype="multipart/form-data" {{action 'createPhoto' on='submit'}}>
+    <ul class="standard_list">
+      <li>
+        <label>New Photo</label>
+        {{view 'upload-file' name="photo" file=photo }}
+      </li>
+    </ul>
+    {{input type="hidden" value=filename name="filename"}}
+    <div class="align-center">
+      <input class="red" type="submit" value="Save" />
+      <button class="outline" {{action 'cancel'}}>Cancel</button>
+    </div>
+  </form>
+</div>
