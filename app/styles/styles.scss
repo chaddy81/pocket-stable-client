@@ -173,6 +173,7 @@ input {
   margin: 10px 0;
   background: #fff;
   height: 40px;
+  line-height: 40px;
   position: relative;
 
   span {
@@ -830,13 +831,23 @@ form#account_settings input, .state {
     height: 400px;
     margin: auto;
   }
-  .standard_list_left_full li, .standard_list_left li, .standard_list_right li, .list_buttons li {
+  .standard_list_left_full li, .standard_list_left li, .standard_list_right li, .list_buttons li{
     margin: 10px 0 10px 0%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .standard_list li {
+    margin: 10px 5%;
   }
 }
 
 @media all and (max-width: 460px) {
   .horse_profilephoto {
     height: 300px;
+
+    img {
+      max-height: 300px;
+    }
   }
 }
