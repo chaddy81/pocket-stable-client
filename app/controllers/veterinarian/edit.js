@@ -1,12 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['application'],
+
   title: function() {
     return this.get('model.name');
   }.property('model.name'),
 
   actions: {
-    editVet: function() {
+    editVet(): function() {
       var name = this.get('model.name'),
           phone = this.get('model.phone');
 
