@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
   }.property('model.name'),
 
   actions: {
-    editVet(): function() {
+    editVet: function() {
       var name = this.get('model.name'),
           phone = this.get('model.phone');
 
