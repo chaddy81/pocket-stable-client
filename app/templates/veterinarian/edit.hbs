@@ -1,13 +1,13 @@
 <div class="container">
-  <form id="horse_info" {{action 'createVet' on='submit'}}>
+  <form id="horse_info" {{action 'editVet' on='submit'}}>
     <ul class="standard_list">
       <li>
         <label>Name</label>
-        {{input id='name' placeholder='Name' value=name class="login_field"}}
+        {{input id='name' placeholder='Name' value=model.name class="login_field"}}
       </li>
       <li>
         <label>Phone</label>
-        {{input id='phone' placeholder='Phone' value=phone class="login_field"}}
+        {{input id='phone' placeholder='Phone' value=model.phone class="login_field"}}
       </li>
     </ul>
     <input class="red" type="submit" value="Save" />
