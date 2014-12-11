@@ -3,13 +3,12 @@ import Ember from 'ember';
 
 export default DS.RESTSerializer.extend({
   serializeIntoHash: function(data, type, record, options) {
-    var root = Ember.String.underscore(type.typeKey);
-    data[root] = this.serialize(record, options);
+    var root = Ember.String.decamelize(type.typeKey);
+    data[root] = this.serialize(record);
   },
 
-  serialize: function(record, options) {
-    var json = this._super(record, options);
-
+  serialize: function(record) {
+    var json = this._super(record);
     delete json.horses;
 
     return json;

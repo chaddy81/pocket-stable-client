@@ -14,17 +14,19 @@ export default Ember.Controller.extend({
 
   actions: {
     editStable: function() {
-      var last_farrier = this.get('model.last_farrier'),
-          farrier_name = this.get('model.farrier_name'),
-          farrier_phone = this.get('model.farrier_phone'),
-          farrier_interval = this.get('model.farrier_interval'),
-          hay = this.get('model.hay'),
-          feed = this.get('model.feed'),
-          supplements = this.get('model.supplements');
+      var last_farrier = this.get('model.stable_info.last_farrier'),
+          farrier_name = this.get('model.stable_info.farrier_name'),
+          farrier_phone = this.get('model.stable_info.farrier_phone'),
+          farrier_interval = this.get('model.stable_info.farrier_interval'),
+          hay = this.get('model.stable_info.hay'),
+          feed = this.get('model.stable_info.feed'),
+          supplements = this.get('model.stable_info.supplements');
+
+      console.log(farrier_interval);
 
       var self = this;
 
-      this.store.find('stable-information', this.get('model').id).then(function(stable) {
+      this.store.find('stable-information', this.get('model.stable_info').id).then(function(stable) {
         stable.set('last_farrier', last_farrier);
         stable.set('farrier_name', farrier_name);
         stable.set('farrier_phone', farrier_phone);
