@@ -30,6 +30,10 @@ export default Ember.Controller.extend({
 
     cancel: function() {
       this.transitionToRoute('documents.new');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('documents.index');
     }
   }
 });

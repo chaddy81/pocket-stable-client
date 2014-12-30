@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: ['note', 'application'],
 
+  title: function() {
+    return this.get('model.title');
+  }.property('model.title'),
+
   actions: {
     updateNote: function() {
       var title = this.get('model.title'),
@@ -34,6 +38,10 @@ export default Ember.Controller.extend({
 
     cancel: function() {
       this.transitionToRoute('note.index');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('note.index', this.get('model.id'));
     }
   }
 });

@@ -16,6 +16,10 @@ export default Ember.Controller.extend({
       rec.save().then(function () {
         self.transitionToRoute('documents.index');
       });
+    },
+
+    goBack: function(){
+      this.transitionToRoute('documents.index');
     }
   }
 });

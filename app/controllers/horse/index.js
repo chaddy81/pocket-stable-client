@@ -20,6 +20,10 @@ export default Ember.Controller.extend({
   actions: {
     edit: function() {
       this.transitionToRoute('horse.edit');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('horses.index');
     }
   }
 });

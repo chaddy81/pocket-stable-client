@@ -15,5 +15,11 @@ export default Ember.Controller.extend({
     });
 
     return dataArray;
-  }.property('model.weights')
+  }.property('model.weights'),
+
+  actions: {
+    goBack: function(){
+      this.transitionToRoute('horse.index', this.get('model.horse.id'));
+    }
+  }
 });

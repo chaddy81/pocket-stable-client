@@ -30,6 +30,10 @@ export default Ember.Controller.extend({
 
     cancel: function() {
       this.transitionToRoute('photos.index');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('horse.index', this.get('model.horse.id'));
     }
   }
 });

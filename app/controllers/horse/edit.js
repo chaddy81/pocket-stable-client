@@ -63,6 +63,9 @@ export default Ember.Controller.extend({
       rec.save().then(function () {
         self.transitionToRoute('horses.index');
       });
+    },
+    goBack: function(){
+      this.transitionToRoute('horse.index', this.get('model.id'));
     }
   }
 });

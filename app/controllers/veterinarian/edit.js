@@ -28,6 +28,10 @@ export default Ember.Controller.extend({
           console.log(error);
         });
       });
+    },
+
+    goBack: function(){
+      this.transitionToRoute('veterinarian.index', this.get('model.id'));
     }
   }
 });

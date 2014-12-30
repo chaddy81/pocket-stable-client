@@ -13,6 +13,10 @@ export default Ember.Controller.extend({
   actions: {
     edit: function() {
       this.transitionToRoute('stable-information.edit');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('horse.index', this.get('model.horse').id);
     }
   }
 });

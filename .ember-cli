@@ -1,4 +1,5 @@
 {
   "disableAnalytics": false,
   "environment": "development"
+  "output-path": "~/Projects/pocket-stable-android/www"
 }

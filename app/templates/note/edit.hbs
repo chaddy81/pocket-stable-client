@@ -1,23 +1,30 @@
 <div class="container">
-<ul class="standard_list_left">
+{{!-- <ul class="standard_list_left">
   <li>Title</li>
   <li>Date</li>
   <li>Start Time</li>
   <li>End Time</li>
   <li>Content</li>
-</ul>
+</ul> --}}
 
-<form {{action 'updateNote' on='submit'}}>
-  <ul class="standard_list_right">
-    <li>{{input id='title' placeholder='Title' value=model.title class="login_field"}}</li>
-    {{!-- <li>{{input id='date' placeholder='Date' value=model.date class="login_field"}}</li> --}}
+<form id="horse_info" {{action 'updateNote' on='submit'}}>
+  <ul class="standard_list">
     <li>
-      {{date-picker-input controls="my-datepicker" dateFormat="dddd, MMMM D, YYYY" value=model.date class="login_field"}}
-      {{date-picker-controls id="my-datepicker"}}
+      <label>Title</label>
+      {{input id='title' placeholder='Title' value=model.title class="login_field"}}</li>
+    <li>
+      <label>Date</label>
+      {{input id='date' value=model.date class="login_field" type="date"}}
     </li>
-    <li>{{input id='start-time' placeholder='Start Time' value=model.start_time class="login_field"}}</li>
-    <li>{{input id='end-time' placeholder='End Time' value=model.end_time class="login_field"}}</li>
-    <li>{{input id='content' placeholder='Content' value=model.content class="login_field"}}</li>
+    <li>
+      <label>Start Time</label>
+      {{input id='start-time' type="time" value=model.start_time class="login_field"}}</li>
+    <li>
+      <label>End Time</label>
+      {{input id='end-time' type="time" value=model.end_time class="login_field"}}</li>
+    <li>
+      <label>Content</label>
+      {{input id='content' placeholder='Content' value=model.content class="login_field"}}</li>
   </ul>
   <input class="red" type="submit" value="Save">
   <button class="outline" {{action 'cancel'}}>Cancel</button>

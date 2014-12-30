@@ -6,6 +6,10 @@ export default Ember.ArrayController.extend({
   actions: {
     newObject: function() {
       this.transitionToRoute('documents.new');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('horses.index');
     }
   }
 });

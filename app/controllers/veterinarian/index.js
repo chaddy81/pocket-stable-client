@@ -17,6 +17,9 @@ export default Ember.Controller.extend({
       rec.save().then(function () {
         self.transitionToRoute('veterinarians.index');
       });
+    },
+    goBack: function(){
+      this.transitionToRoute('veterinarians.index');
     }
   }
 });

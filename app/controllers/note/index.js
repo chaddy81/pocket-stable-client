@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  title: function() {
+    return this.get('model.title');
+  }.property('model.title'),
+
   formattedDate: function() {
     var date = this.get('model.date');
 
@@ -19,5 +23,15 @@ export default Ember.Controller.extend({
     }
 
     return newTime;
-  }.property('model.start_time', 'model.end_time')
+  }.property('model.start_time', 'model.end_time'),
+
+  actions: {
+    edit: function() {
+      this.transitionToRoute('note.edit');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('notes.index');
+    }
+  }
 });

@@ -51,6 +51,10 @@ export default Ember.Controller.extend({
 
     cancel: function() {
       this.transitionToRoute('stable-information.index');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('stable-information.index', this.get('model').id);
     }
   }
 });

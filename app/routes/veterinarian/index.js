@@ -15,6 +15,6 @@ export default Ember.Route.extend({
       into: 'application'
     });
 
-    this.render();
+    this.render('veterinarian/index');
   }
 });

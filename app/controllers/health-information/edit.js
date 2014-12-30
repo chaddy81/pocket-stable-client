@@ -68,6 +68,10 @@ export default Ember.Controller.extend({
 
     cancel: function() {
       this.transitionToRoute('health-information.index');
+    },
+
+    goBack: function(){
+      this.transitionToRoute('health-information.index');
     }
   }
 });

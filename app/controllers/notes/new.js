@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  title: "New Note",
+
   actions: {
     createNote: function() {
       var title = this.get('title'),
