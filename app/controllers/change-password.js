@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   needs: ['application'],
+
+  title: 'Change Password',
+
   actions: {
     updateUser: function() {
       var old_password = this.get('current_password'),
@@ -22,6 +25,10 @@ export default Ember.Controller.extend({
           self.transitionToRoute('horses');
         });
       });
+    },
+
+    goBack: function(){
+      this.transitionToRoute('account-settings');
     }
   }
 });
