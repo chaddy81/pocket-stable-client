@@ -17,6 +17,7 @@ export default Ember.Controller.extend({
           self.get("controllers.application").notify({
             message: "Instructions have been sent to your email",
             type: "alert-success"});
+          self.set('email', '');
           self.transitionTo('login');
         },
         error: function(error) {
