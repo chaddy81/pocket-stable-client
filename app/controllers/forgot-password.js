@@ -27,6 +27,10 @@ export default Ember.Controller.extend({
             type: "alert-error"});
         }
       });
+    },
+
+    goBack: function(){
+      this.transitionToRoute('login');
     }
   }
 });
