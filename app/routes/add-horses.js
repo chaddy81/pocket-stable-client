@@ -7,6 +7,6 @@ export default Ember.Route.extend({
       into: 'application'
     });
 
-    this.render('upgrade-account');
+    this.render('add-horses');
   }
 });

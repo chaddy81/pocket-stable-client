@@ -69,6 +69,7 @@ Router.map(function() {
   this.route('upgrade-account');
   this.route('password-changed');
   this.route('veterinarian/edit');
+  this.resource('add-horses', function() { });
 });
 
 export default Router;
