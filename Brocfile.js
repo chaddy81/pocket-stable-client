@@ -32,7 +32,7 @@ app.import('bower_components/d3/d3.js');
 app.import('bower_components/ember-charts/dist/ember-charts.js');
 app.import('bower_components/ember-charts/dist/ember-charts.css');
 app.import('bower_components/select2/select2.js');
-app.import('bower_components/stripe.js/index');
+app.import('bower_components/stripe.js/');
 app.import('bower_components/jquery.payment/lib/jquery.payment.js');
 
 module.exports = app.toTree();
