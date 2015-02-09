@@ -1,0 +1,41 @@
+<script>
+  $(function() {
+    $('#card_last4').payment('formatCardNumber');
+    $('#cv_field').payment('formatCardCVC');
+  });
+</script>
+<div class="container">
+  <div class="totalpayment">
+    <p>Total Payment
+    <br /><br />
+    <span class="bigmid_number">
+      ${{cost}}
+    </span>
+    <span class="xsmall">
+      {{controller.interval}}
+    </span>
+    </p>
+  </div>
+  {{controller.horse_count}}
+  <div class="login_form">
+    <form id="payment-form" {{action 'createPayment' on='submit'}}>
+      <div class="payment-errors"></div>
+      {{input id='nick_name' placeholder='Nick Name' value=session.user_name class="login_field"}}
+
+      <input id='card_last4' placeholder='Card Number' value="" class="login_field" data-stripe="number" pattern="[0-9]{13,16}" />
+
+      <br />
+      <div class="card_fields">
+        <div class="expdate">Expiration date</div><div class="cc_cv">CV Code</div>
+        <input id="mm_field" class="mm_field" type="cc_month" name="cc_month" placeholder="MM" data-stripe="exp-month" />
+        <input id="yyyy_field" class="yyyy_field" type="cc_year" name="cc_year" placeholder="YYYY" data-stripe="exp-year" />
+
+        <input id="cv_field" class="cv_field" type="cc_CVCode" name="cc_CVCode" placeholder="" data-stripe="cvc" />
+      </div>
+      <input type='hidden' value="" id="stripe_token" />
+
+      <input class="red" type="submit" value="Purchase Now" /><br />
+      <img src="assets/images/lock.png" /> <span class="xsmall">Secure encrypted payment</span>
+    </form>
+  </div>
+</div>

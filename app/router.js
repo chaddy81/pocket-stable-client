@@ -59,17 +59,21 @@ Router.map(function() {
     this.route('edit');
   });
 
+  this.resource('upgrade-account', { path: 'upgrade-account' }, function() {
+    this.route('payment');
+    this.route('add-horses');
+  });
+
   this.route('signup');
   this.route('check-email');
   this.route('change-password');
   this.route('cancel-account');
   this.route('account-settings');
-  this.route('payment');
+
   this.route('stable-information');
-  this.route('upgrade-account');
   this.route('password-changed');
   this.route('veterinarian/edit');
-  this.resource('add-horses', function() { });
+
 });
 
 export default Router;

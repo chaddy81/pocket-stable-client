@@ -43,13 +43,11 @@ export default Ember.Controller.extend({
             message: "You have successfully created a horse.",
             type: "alert-success"});
         self.transitionToRoute('horse', horse);
-      },function(error) {
-        console.log(error.responseJSON.errors);
+      }).catch(function(error) {
         self.get("controllers.application").notify({
             title: "Error!",
-            message: error.responseJSON.errors,
+            message: error.errors,
             type: "alert-error"});
-        console.log(error.responseText);
       });
     },
 

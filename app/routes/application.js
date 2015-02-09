@@ -22,7 +22,6 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     },
 
     didTransition: function() {
-      console.log(this.get('session'));
       if ($('.pushy.pushy-open').length) {
         $('.pushy.pushy-open').removeClass('pushy-open').addClass('pushy-left');
         $('body').removeClass('pushy-active');
@@ -31,11 +30,6 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
       if($('body').hasClass('fullwhite')) {
         $('body').removeClass('fullwhite');
       }
-    },
-
-    // goBack: function(){
-    //   console.log(window.history.state.path);
-    //   window.history.back();
-    // }
+    }
   }
 });

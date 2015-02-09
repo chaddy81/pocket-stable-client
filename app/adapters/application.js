@@ -8,5 +8,15 @@ export default DS.RESTAdapter.extend({
     return Ember.String.pluralize(decamelized);
   },
   namespace: 'api',
-  host: ENV.APP.host
+  host: ENV.APP.host,
+  ajaxError: function(jqXHR) {
+    var error = this._super(jqXHR);
+
+    if (jqXHR && jqXHR.status === 422) {
+      var jsonErrors = Ember.$.parseJSON(jqXHR.responseText);
+      return new DS.InvalidError(jsonErrors);
+    } else {
+      return error;
+    }
+  }
 });

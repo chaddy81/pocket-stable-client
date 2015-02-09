@@ -576,12 +576,16 @@ input[type=radio].css-checkbox {
 
 label.css-label {
   background-image: url('images/csscheckbox_img.png');
+  background-repeat: no-repeat;
+  display: inline-block;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding-left: 35px;
+  height: 30px;
 }
 
 .large_number {
@@ -626,6 +630,7 @@ label.css-label {
   border: 0.8em solid #941127;
   background: #941127;
   border-radius: 100%;
+  cursor: pointer;
   height: 2em;
   width: 2em;
   text-align: center;
@@ -647,6 +652,7 @@ label.css-label {
   border: 0.8em solid #BEBDBE;
   background: #BEBDBE;
   border-radius: 100%;
+  cursor: pointer;
   height: 2em;
   width: 2em;
   text-align: center;

@@ -1,0 +1,33 @@
+<div class="container">
+
+<div class="addhorses">
+  <p>Add more horses
+    <div class="addbuttons">
+      <div class="addfive" {{action 'incrementCounter' on='click'}}><p>+5</p></div><div class="minusfive" {{action 'decrementCounter' on='click'}}><p>-5</p>
+      </div>
+    </div>
+  <br />each addtional 5 horses<br />
+  only $2 a month</p>
+</div>
+
+<div class="upgrade">
+<p>Total Horses<br />
+<span class="large_number">{{controller.addNumHorses}}</span><br /><br />
+Total Payment
+</p>
+<br />
+<form {{action 'updatePayment' on="submit"}}>
+
+<span class="mid_number">${{controller.monthlyCost}}</span>
+{{radio-button id="monthly" class="css-checkbox" name=isYearly value=0}}
+<label for="monthly" class="css-label"> <span class="xsmall">Monthly</span></label>
+<br /><br />
+<span class="mid_number">${{controller.yearlyCost}}</span>
+{{radio-button id="yearly" class="css-checkbox" name=isYearly value=1}}
+<label for="yearly" class="css-label"> <span class="xsmall">Yearly</span></label>
+<br /><br />
+<button class="red" type="submit">Make Payment</button>
+</form>
+</div>
+
+</div>

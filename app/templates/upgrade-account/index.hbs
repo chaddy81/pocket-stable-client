@@ -1,0 +1,26 @@
+<div class="container">
+
+<div class="upgrade">
+<p><span class="upgrade_title">Upgrade your Pocket Stable account</span> <br />and you can store and access<br />information for up to<br />
+<span class="large_number">{{controller.horseCount}}</span><br />
+Horses</p>
+<br />
+<form {{action 'updatePayment' on='submit'}}>
+  <span class="mid_number">${{monthlyCost}}</span>
+  {{radio-button id="monthly" class="css-checkbox" name=isYearly value=0}}
+  <label for="monthly" class="css-label"> <span class="xsmall">Monthly</span></label>
+  <br /><br />
+  <span class="mid_number">${{yearlyCost}}</span>
+  {{radio-button id="yearly" class="css-checkbox" name=isYearly value=1}}
+  <label for="yearly" class="css-label"> <span class="xsmall">Yearly</span></label>
+
+  <br /><br />
+  {{#link-to 'upgrade-account.add-horses'}}<button class="red">Add More Horses</button>{{/link-to}}
+
+
+  <br /><span class="xsmall">OR</span><br />
+  <button class="red" type="submit">Upgrade Now</button>
+</form>
+</div>
+
+</div>

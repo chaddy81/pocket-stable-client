@@ -5,5 +5,6 @@ export default DS.Model.extend({
   email: DS.attr(),
   current_password: DS.attr(),
   password: DS.attr(),
-  password_confirmation: DS.attr()
+  password_confirmation: DS.attr(),
+  payment: DS.belongsTo('payment')
 });

@@ -25,7 +25,7 @@
     "tag": "v0.0.2",
     "commit": "3a6dc87e29efc9de4bc42b6f9afedabb000bcc89"
   },
-  "_source": "git://github.com/stefanpenner/ember-load-initializers.git",
+  "_source": "git://github.com/ember-cli/ember-load-initializers.git",
   "_target": "0.0.2",
-  "_originalSource": "stefanpenner/ember-load-initializers"
+  "_originalSource": "ember-cli/ember-load-initializers"
 }
