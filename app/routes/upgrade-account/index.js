@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import Payment from '../../models/payment';
 
 import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 

@@ -9,20 +9,23 @@ export default Ember.Controller.extend({
     return this.get('title');
   },
 
-  closeNotification: function() {
-    var notification = this.get('notification');
-    if(notification) {
-      if(notification.persists) {
-        console.log("Notification detected, clearing alert notification after next transition");
-        notification.persists = null;
-      } else {
-        console.log("Notification detected, clearing alert notification now");
-        this.set('notification', null);
-      }
-    }
-  },
+  actions: {
 
-  notify: function(options) {
-    this.set('notification', options);
+    closeNotification: function() {
+      var notification = this.get('notification');
+      if(notification) {
+        if(notification.persists) {
+          console.log("Notification detected, clearing alert notification after next transition");
+          notification.persists = null;
+        } else {
+          console.log("Notification detected, clearing alert notification now");
+          this.set('notification', null);
+        }
+      }
+    },
+
+    notify: function(options) {
+      this.set('notification', options);
+    }
   }
 });

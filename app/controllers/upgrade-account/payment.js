@@ -1,9 +1,14 @@
 import Ember from 'ember';
+import ENV from '../../config/environment';
 
 export default Ember.Controller.extend({
   needs: ['upgrade-account/index','application'],
   title: "Payment",
   counter: 1,
+  pubKey: function() {
+    console.log(ENV.APP.STRIPE_PUBLISHABLE);
+    return ENV.APP.STRIPE_PUBLISHABLE;
+  }.property('ENV.APP.STRIPE_PUBLISHABLE'),
 
   cost: function() {
     var cost = localStorage.getItem('cost');
@@ -61,7 +66,6 @@ export default Ember.Controller.extend({
           $form.find('#stripe_token').val(token);
 
           var stripe_token = $form.find('#stripe_token').val();
-          var newHorseCount = me.get('newHorseCount');
 
           var self = me;
 
@@ -73,11 +77,11 @@ export default Ember.Controller.extend({
             payment.set('card_last4', last4);
 
             payment.save().then(function() {
-              self.get("controllers.application").notify({
+              self.get("controllers.application").send('notify', {
                   title: "Success!",
                   message: "Payment Created",
                   type: "alert-success"});
-    
+
               self.transitionToRoute('horses.index');
             }).catch(function(error) {
               console.log(error);

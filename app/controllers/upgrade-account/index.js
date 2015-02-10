@@ -8,7 +8,6 @@ export default Ember.Controller.extend({
 
   horseCount: function() {
     var curHorseCount = this.get('model.total_horses'),
-        horses = this.get('horses'),
         retHorseCount;
 
     if (curHorseCount <= 5) {

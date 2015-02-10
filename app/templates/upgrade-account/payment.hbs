@@ -4,6 +4,7 @@
     $('#cv_field').payment('formatCardCVC');
   });
 </script>
+
 <div class="container">
   <div class="totalpayment">
     <p>Total Payment
@@ -16,7 +17,7 @@
     </span>
     </p>
   </div>
-  {{controller.horse_count}}
+
   <div class="login_form">
     <form id="payment-form" {{action 'createPayment' on='submit'}}>
       <div class="payment-errors"></div>
