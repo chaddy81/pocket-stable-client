@@ -6,27 +6,19 @@ export default Ember.Controller.extend({
   title: "Forgot Password?",
   actions: {
     sendEmail: function() {
-      var email = this.get('email'),
-          self = this;
+      var email = this.get('email');
 
       $.ajax({
         type: 'POST',
-        url: ENV.APP.host + '/api/users/forgot_password',
         data: {email: email},
-        success: function() {
-          self.get("controllers.application").notify({
-            message: "Instructions have been sent to your email",
-            type: "alert-success"});
-          self.set('email', '');
-          self.transitionTo('login');
-        },
-        error: function(error) {
-          self.get("controllers.application").notify({
-            title: "Error!",
-            message: error.responseText,
-            type: "alert-error"});
-        }
+        url: ENV.APP.host + '/api/users/forgot_password'
       });
+
+      this.get("controllers.application").send('notify', {
+        message: "Instructions have been sent to your email",
+        type: "alert-success"});
+      this.set('email', '');
+      this.transitionTo('login');
     },
 
     goBack: function(){
