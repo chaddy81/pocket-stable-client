@@ -5,6 +5,7 @@
     "-Promise": true,
     "moment": true,
     "$": true,
+    "Stripe": true,
     "Bloodhound": true
   },
   "browser" : true,

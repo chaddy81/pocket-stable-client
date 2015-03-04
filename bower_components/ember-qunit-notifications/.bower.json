@@ -1,6 +1,5 @@
 {
   "name": "ember-qunit-notifications",
-  "version": "0.0.5",
   "homepage": "https://github.com/dockyard/ember-qunit-notifications",
   "authors": [
     "Brian Cardarella <bcardarella@gmail.com>"
@@ -16,15 +15,16 @@
     "tests"
   ],
   "dependencies": {
-    "qunit-notifications": "~0.0.4"
+    "qunit-notifications": "~0.0.6"
   },
-  "_release": "0.0.5",
+  "version": "0.0.7",
+  "_release": "0.0.7",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.5",
-    "commit": "7eb1cdca0d93b7e5348d9bf93e38d6ff04af67e6"
+    "tag": "v0.0.7",
+    "commit": "d859e8cfa57ddcb87229820b1d4121bb0f3e26a1"
   },
   "_source": "git://github.com/dockyard/ember-qunit-notifications.git",
-  "_target": "0.0.5",
+  "_target": "0.0.7",
   "_originalSource": "ember-qunit-notifications"
 }
