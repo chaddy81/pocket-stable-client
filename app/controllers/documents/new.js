@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
       doc.save().then(function() {
         self.transitionToRoute('document', doc);
       }).catch(function(error) {
-        self.get("controllers.application").notify({
+        self.get("controllers.application").send('notify', {
             title: "Error!",
             message: JSON.parse(error.responseText).errors,
             type: "alert-error"});

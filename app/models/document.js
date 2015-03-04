@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-DS.Model.extend({
+var Document = DS.Model.extend({
   name: DS.attr(),
   file: DS.attr(),
   tags: DS.attr(),

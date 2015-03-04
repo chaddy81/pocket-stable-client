@@ -81,7 +81,7 @@ export default Ember.Controller.extend({
             payment.set('card_last4', last4);
 
             payment.save().then(function() {
-              self.get("controllers.application").notify({
+              self.get("controllers.application").send('notify', {
                   title: "Success!",
                   message: "Payment Created",
                   type: "alert-success"});

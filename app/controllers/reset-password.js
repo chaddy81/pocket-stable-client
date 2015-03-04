@@ -18,13 +18,13 @@ export default Ember.Controller.extend({
         url: ENV.APP.host + '/api/users/reset_password',
         data: {password: password, password_confirmation: password_confirmation, reset_token: reset_token},
         success: function() {
-          self.get("controllers.application").notify({
+          self.get("controllers.application").send('notify', {
             message: "Password has been reset",
             type: "alert-success"});
           self.transitionTo('login');
         },
         error: function(error) {
-          self.get("controllers.application").notify({
+          self.get("controllers.application").send('notify', {
             title: "Error!",
             message: error.responseText,
             type: "alert-error"});

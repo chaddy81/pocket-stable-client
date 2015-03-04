@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
         note.set('content', content);
 
         note.save().then(function() {
-          self.get("controllers.application").notify({
+          self.get("controllers.application").send('notify', {
             title: "Success!",
             message: "You have successfully updated note.",
             type: "alert-success"});

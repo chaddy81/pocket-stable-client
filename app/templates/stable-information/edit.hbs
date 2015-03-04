@@ -4,7 +4,7 @@
     <ul class="standard_list">
       <li>
         <label>Last Farrier</label>
-        {{input id='last_farrier' placeholder='Last Farrier' value=farrierDate class="login_field"}}
+        {{input type='date' id='last_farrier' placeholder='Last Farrier' value=model.stable_info.last_farrier class="login_field"}}
       </li>
       <li>
         <label>Farrier Name</label>
@@ -12,7 +12,7 @@
       </li>
       <li>
         <label>Farrier Phone</label>
-        {{input id='farrier_phone' placeholder='Farrier Phone' value=model.stable_info.farrier_phone class="login_field"}}
+        {{input type='tel' id='farrier_phone' placeholder='Farrier Phone' value=model.stable_info.farrier_phone class="login_field"}}
       </li>
       <li>
         <label>Farrier Interval</label>

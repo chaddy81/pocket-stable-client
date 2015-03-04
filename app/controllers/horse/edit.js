@@ -40,10 +40,11 @@ export default Ember.Controller.extend({
         horse.set('emergencies', emergencies);
         horse.set('comments', comments);
         horse.save().then(function() {
-          self.get("controllers.application").notify({
-            title: "Success!",
-            message: "You have successfully updated horse.",
-            type: "alert-success"});
+          console.log('Saved');
+          // self.get("controllers.application").send('notify', {
+          //   title: "Success!",
+          //   message: "You have successfully updated horse.",
+          //   type: "alert-success"});
           self.transitionToRoute('horse', horse);
         }).catch(function(error) {
           console.log(error);

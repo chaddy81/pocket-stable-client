@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
                 phone: phone });
 
       vet.save().then(function() {
-        self.get("controllers.application").notify({
+        self.get("controllers.application").send('notify', {
             title: "Success!",
             message: "You have successfully created: " + name,
             type: "alert-success"});

@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
 
       var newWeight = this.get('store').createRecord('weight', {weight: weight, horse_id: this.get('model.horse')});
       newWeight.save().then(function() {
-        self.get("controllers.application").notify({
+        self.get("controllers.application").send('notify', {
             title: "Success!",
             message: "Weight successfully recorded.",
             type: "alert-success"});

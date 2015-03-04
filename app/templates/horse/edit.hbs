@@ -22,13 +22,8 @@
         <label>Sex</label>
         {{input id='sex' placeholder='Sex' value=model.sex class="login_field"}}</li>
       <li>
-        <label>Fertility</label>
-        {{input id='fertility' placeholder='Fertility' value=model.fertility class="login_field"}}</li>
-      {{!-- <li>{{input id='foalingDate' placeholder='Foaling Date' value=foaling_date class="login_field"}}</li> --}}
-      <li>
         <label>Foaling Date</label>
-        {{date-picker-input controls="my-datepicker" value=foaling_date class="login_field"}}
-        {{date-picker-controls id="my-datepicker"}}
+        {{input id='foaling-date' type="date" placeholder='Foaling Date' value=model.foaling_date class="login_field"}}
       </li>
       <li>
         <label>Color</label>

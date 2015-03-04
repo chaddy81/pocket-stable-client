@@ -11,7 +11,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     },
 
     sessionAuthenticationFailed: function() {
-      this.get('container').lookup('controller:application').notify({
+      this.get('container').lookup('controller:application').send('notify', {
             title: "Error!",
             message: "Please use a valid username/password.",
             type: "alert-error"});

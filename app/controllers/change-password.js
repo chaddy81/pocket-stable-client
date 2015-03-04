@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
         user.set('password', password);
         user.set('password_confirmation', password_confirmation);
         user.save().then(function() {
-          self.get("controllers.application").notify({
+          self.get("controllers.application").send('notify', {
             title: "Success!",
             message: "Password had been updated.",
             type: "alert-success"});

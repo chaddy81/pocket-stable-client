@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   needs: ['application'],
+
+  title: 'My New Horse',
+
   actions: {
     createHorse: function() {
       var avatar = this.get('avatar'),
@@ -26,7 +29,6 @@ export default Ember.Controller.extend({
                 name: name,
                 nick_name: nick_name,
                 sex: sex,
-                fertility: fertility,
                 foaling_date: foaling_date,
                 color: color,
                 date_of_birth: date_of_birth,
@@ -38,13 +40,13 @@ export default Ember.Controller.extend({
                 comments: comments });
 
       horse.save().then(function() {
-        self.get("controllers.application").notify({
+        self.get("controllers.application").send('notify', {
             title: "Success!",
             message: "You have successfully created a horse.",
             type: "alert-success"});
         self.transitionToRoute('horse', horse);
       }).catch(function(error) {
-        self.get("controllers.application").notify({
+        self.get("controllers.application").send('notify', {
             title: "Error!",
             message: error.errors,
             type: "alert-error"});

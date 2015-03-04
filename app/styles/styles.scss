@@ -741,7 +741,7 @@ label.css-label {
   }
 }
 
-#horse_info label, input[type="date"], input[type="time"], #feeding_records label, #stable_info label, #documents label {
+#horse_info label, input[type="date"], input[type="time"], input[type="tel"], #feeding_records label, #stable_info label, #documents label {
   padding: 0 20px;
   background: #fff;
   color: #980921;
@@ -750,7 +750,7 @@ label.css-label {
   line-height: 38px;
 }
 
-#horse_info input[type="text"], input[type="date"], input[type="time"], input[type="file"], #feeding_records input[type="text"], #stable_info input[type="text"], #documents input[type="text"] {
+#horse_info input[type="text"], input[type="date"], input[type="time"], input[type="tel"], input[type="file"], #feeding_records input[type="text"], #stable_info input[type="text"], #documents input[type="text"] {
   text-align: right;
   -webkit-appearance: none;
   border-radius: 0;

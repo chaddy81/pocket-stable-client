@@ -21,22 +21,15 @@
         <label>Sex</label>
         {{input id='sex' placeholder='Sex' value=sex class="login_field"}}</li>
       <li>
-        <label>Fertility</label>
-        {{input id='fertility' placeholder='Fertility' value=fertility class="login_field"}}</li>
-      {{!-- <li>{{input id='foalingDate' placeholder='Foaling Date' value=foaling_date class="login_field"}}</li> --}}
-      <li>
         <label>Foaling Date</label>
-        {{date-picker-input controls="my-datepicker" value=foaling_date class="login_field"}}
-        {{date-picker-controls id="my-datepicker"}}
+        {{input id='foaling-date' type="date" placeholder='Foaling Date' value=foaling_date class="login_field"}}
       </li>
       <li>
         <label>Color</label>
         {{input id='color' placeholder='Color' value=color class="login_field"}}</li>
-      {{!-- <li>{{input id='birthDate' placeholder='Birth Date' value=date_of_birth class="login_field"}}</li> --}}
       <li>
         <label>Date of Birth</label>
-        {{date-picker-input controls="birth-date" value=date_of_birth class="login_field"}}
-        {{date-picker-controls id="birth-date"}}
+        {{input id='birth-date' type="date" placeholder='Date of Birth' value=date_of_birth class="login_field"}}
       </li>
       <li>
         <label>Markings</label>

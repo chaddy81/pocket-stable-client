@@ -38,13 +38,16 @@ export default Ember.Controller.extend({
         console.log(stable);
 
         stable.save().then(function() {
-          self.get("controllers.application").notify({
+          self.get("controllers.application").send('notify', {
             title: "Success!",
             message: "Stable Information successfully updated.",
             type: "alert-success"});
           self.transitionToRoute('stable-information.index');
         }).catch(function(error) {
-          console.log(error);
+          self.get("controllers.application").send('notify', {
+            title: "Error!",
+            message: error,
+            type: "alert-error"});
         });
       });
     },

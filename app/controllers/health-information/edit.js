@@ -55,7 +55,7 @@ export default Ember.Controller.extend({
         health.set('health_comments', health_comments);
 
         health.save().then(function() {
-          self.get("controllers.application").notify({
+          self.get("controllers.application").send('notify', {
             title: "Success!",
             message: "Health Information successfully updated.",
             type: "alert-success"});
