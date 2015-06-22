@@ -29,9 +29,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.host = 'http://0.0.0.0:3000';
-    ENV.APP.serverTokenEndpoint = 'http://0.0.0.0:3000/users/sign_in';
-    ENV.APP.crossOriginWhitelist = ['http://0.0.0.0:3000', 'http://0.0.0.0:3000/api/users'];
+    ENV.APP.host = 'http://localhost:3000';
+    ENV.APP.serverTokenEndpoint = 'http://localhost:3000/users/sign_in';
+    ENV.APP.crossOriginWhitelist = ['http://localhost:3000', 'http://localhost:3000/api/users'];
   }
 
   if (environment === 'test') {
@@ -62,11 +62,20 @@ module.exports = function(environment) {
     ENV.APP.crossOriginWhitelist = ['http://pocket-stable-api.herokuapp.com', 'http://pocket-stable-api.herokuapp.com/api/users'];
   }
 
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise',
+    authenticationRoute: '/login',
+    session: 'session:withCurrentUser'
+  };
+
   ENV['simple-auth-devise'] = {
     authorizer: 'simple-auth-authorizer:devise',
     serverTokenEndpoint: ENV.APP.serverTokenEndpoint,
-    crossOriginWhitelist: ENV.APP.crossOriginWhitelist
+    crossOriginWhitelist: ENV.APP.crossOriginWhitelist,
+    tokenAttributeName: 'user_token'
   }
+
+  ENV['ember-routing-named-substates'] = true;
 
   return ENV;
 };

@@ -9,8 +9,8 @@
 {{/if}}
 
 <nav class="pushy pushy-left">
-
   <div class="nav_user">
+    {{log session.currentUser}}
     <p>{{session.user_name}}</p>
     <p class="user_account">{{#link-to 'account-settings'}}<img src="assets/images/gear.png" />{{/link-to}}</p>
   </div>
@@ -31,6 +31,6 @@
 <div class="site-overlay"></div>
 
 <div id="push_wrap">
-  {{outlet header}}
+  {{outlet "header"}}
   {{outlet}}
 </div>

@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['application'],
+
   actions: {
     createUser: function() {
       var name = this.get('name'),
@@ -14,7 +16,18 @@ export default Ember.Controller.extend({
         console.log("Successful data: " + data);
         self.transitionToRoute('login');
       }, function(data) {
-        console.log(data);
+        var errors = data.errors;
+        var newErrors = '';
+
+        for(var key in errors) {
+          newErrors += key + ' ' + errors[key] + ', ';
+        }
+
+        newErrors = newErrors.substring(0, newErrors.lastIndexOf(','));
+
+        this.get("controllers.application").send('notify', {
+          message: newErrors,
+          type: "alert-error"});
       }.bind(this));
     }
   }

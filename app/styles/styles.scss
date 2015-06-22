@@ -416,6 +416,10 @@ button {
   border: 1px solid #E1E1DD;
 }
 
+.login_field#emergencies, .login_field#emergencies_phone {
+  width: 125px;
+}
+
 .login_ftr {
   width: 100%;
   text-align: center;

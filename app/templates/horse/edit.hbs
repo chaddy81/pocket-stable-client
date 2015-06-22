@@ -3,7 +3,7 @@
   <form id="horse_info" {{action 'updateHorse' on='submit'}}>
     <ul class="standard_list">
       <li>
-        <label>Horse Avatar</label>
+        <label>Horse Profile Photo</label>
         {{view 'upload-file' name="avatar" file=model.avatar }}
       </li>
       <li>
@@ -19,7 +19,7 @@
         <label>Reg. Number</label>
         {{input id='registration_number' placeholder='Registration Number' value=model.registration_number class="login_field"}}</li>
       <li>
-        <label>Sex</label>
+        <label>Gender</label>
         {{input id='sex' placeholder='Sex' value=model.sex class="login_field"}}</li>
       <li>
         <label>Foaling Date</label>
@@ -31,19 +31,17 @@
       {{!-- <li>{{input id='birthDate' placeholder='Birth Date' value=date_of_birth class="login_field"}}</li> --}}
       <li>
         <label>Date of Birth</label>
-        {{input id='birthDate' placeholder='Birth Date' value=date_of_birth class="login_field" type="date"}}</li>
+        {{input id='birthDate' placeholder='Birth Date' value=date_of_birth class="login_field" type="date"}}
         {{!-- {{date-picker-input controls="birth-date" value=date_of_birth class="login_field"}}
         {{date-picker-controls id="birth-date"}} --}}
       </li>
-      <li>
-        <label>Markings</label>
-        {{input id='markings' placeholder='Markings' value=model.markings class="login_field"}}</li>
       <li>
         <label>Org Numbers</label>
         {{input id='org_numbers' placeholder='Org Numbers' value=model.org_numbers class="login_field"}}</li>
       <li>
         <label>Emergencies</label>
-        {{input id='emergencies' placeholder='Emergencies' value=model.emergencies class="login_field"}}</li>
+        {{input id='emergencies' placeholder='Name' value=model.emergencies class="login_field"}}
+        {{input id='emergencies_phone' placeholder='Phone Number' value=model.emergencies_phone class="login_field"}}</li>
       <li>
         <label>Comments</label>
         {{input id='comments' placeholder='Comments' value=model.comments class="login_field"}}</li>

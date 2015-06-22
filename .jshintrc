@@ -1,13 +1,13 @@
 {
-  "predef": {
-    "document": true,
-    "window": true,
-    "-Promise": true,
-    "moment": true,
-    "$": true,
-    "Stripe": true,
-    "Bloodhound": true
-  },
+  "predef": [
+    "document",
+    "window",
+    "-Promise",
+    "moment",
+    "$",
+    "Stripe",
+    "Bloodhound"
+  ],
   "browser" : true,
   "boss" : true,
   "curly": true,
