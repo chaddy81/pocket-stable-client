@@ -29,6 +29,7 @@ export default Ember.Controller.extend({
                 name: name,
                 nick_name: nick_name,
                 sex: sex,
+                fertility: fertility,
                 foaling_date: foaling_date,
                 color: color,
                 date_of_birth: date_of_birth,
