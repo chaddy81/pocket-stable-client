@@ -20,6 +20,7 @@ export default Ember.Controller.extend({
           registration_number = this.get('registration_number'),
           org_numbers = this.get('org_numbers'),
           emergencies = this.get('emergencies'),
+          emergencies_phone = this.get('emergencies_phone'),
           comments = this.get('comments');
 
       var self = this;
@@ -38,6 +39,7 @@ export default Ember.Controller.extend({
                 registration_number: registration_number,
                 org_numbers: org_numbers,
                 emergencies: emergencies,
+                emergencies_phone: emergencies_phone,
                 comments: comments });
 
       horse.save().then(function() {

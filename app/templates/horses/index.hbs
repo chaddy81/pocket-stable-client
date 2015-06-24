@@ -3,7 +3,7 @@
   {{#each horse in filteredContent}}
     <ol class="card">
       <li class="card_info">
-        {{#link-to 'horse' this.horse}}
+        {{#link-to 'horse' horse}}
           {{#if horse.avatar_thumb_url}}
             <img {{bind-attr src="horse.avatar_thumb_url"}} />
           {{else}}

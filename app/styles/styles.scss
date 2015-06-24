@@ -416,8 +416,17 @@ button {
   border: 1px solid #E1E1DD;
 }
 
-.login_field#emergencies, .login_field#emergencies_phone {
-  width: 125px;
+.emergency {
+  height: 85px !important;
+}
+
+#horse_info .login_field#emergencies{
+  width: 50%;
+}
+
+#horse_info .login_field#emergencies_phone {
+  margin-bottom: 8px;
+  width: 50%;
 }
 
 .login_ftr {

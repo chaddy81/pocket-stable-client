@@ -14,6 +14,7 @@ export default DS.Model.extend({
   registration_number: DS.attr(),
   org_numbers: DS.attr(),
   emergencies: DS.attr(),
+  emergencies_phone: DS.attr(),
   comments: DS.attr(),
   avatar_thumb_url: DS.attr(),
   avatar_profile_url: DS.attr(),
