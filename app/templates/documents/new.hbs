@@ -11,7 +11,8 @@
       </li>
       <li>
         <label>Add to horse(s)</label>
-        {{type-ahead id="search" type="text" multiple="multiple" value=horses placeholder="Horses"}}
+        {{!-- {{input id="search" type="text" multiple="multiple" value=horses placeholder="Horses"}} --}}
+        {{view Ember.Select contentBinding="controllers.horses.content" optionLabelPath="content.name" optionValuePath="content.id" value=horses prompt="Link to Horse" class="horse-link"}}
       </li>
       {{!-- <li>
         <label>Link to Horse</label>

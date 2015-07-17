@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
   actions: {
     goBack: function(){
       this.transitionToRoute('horse.index', this.get('model.horse.id'));
+    },
+
+    newObject: function() {
+      this.transitionToRoute('documents.new');
     }
   }
 });

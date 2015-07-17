@@ -14,7 +14,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   },
 
   renderTemplate: function() {
-    this.render('back-header', {
+    this.render('back-header-plus', {
       outlet: 'header',
       into: 'application'
     });
